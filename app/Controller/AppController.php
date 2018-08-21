@@ -36,6 +36,8 @@ class AppController extends Controller {
         public $components = array('Session','RequestHandler');
 #, 'Menu.MenuBuilder');
 
+           // var $newData = ' ';
+            $this->set('newData', ' ');
 	public function beforeFilter() {
     		parent::beforeFilter();
 	}

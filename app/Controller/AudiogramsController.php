@@ -18,11 +18,14 @@ class AudiogramsController extends AppController{
 		$path = '/app/';
 		$this->set('picture', $picture);
 		$this->set('info', $info);
-		$this->set('newData', $this->data);
+	           //	$this->set('newData', $this->data);
 		//$this->render();
 		// Get JSON encoded data submitted to a PUT/POST action
 		if ($this->request->is('post')){
 			$data = json_decode($this->request->data['object'], true);
+                                    $this->Audiogram->create($data);
+                                    $this->set('newData', $data);
+                                    return $this->redirect(array('controller' => 'audiograms', 'action' => 'insert'));
 			if ($this->Audiogram->saveAssociated($data)){
                                         $this->Session->setFlash('The Post has been saved');
                                 }
