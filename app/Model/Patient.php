@@ -2,15 +2,18 @@
 class Patient extends AppModel{
 	public $primaryKey = 'PatientID';     
         public $hasMany = array(
-                'Audiogram' => array(
+            'Audiogram' => array(
                         'className' => 'Audiogram',
                 ),
-		'Gender_Information' => array(
-			'className' => 'Gender_Information',
+	'Family_Member' => array(
+	            'className' => 'Family_Member',
 		),
-		'Family_Member' => array(
-			'className' => 'Family_Member',
-		),
+        );
+
+        public $hasOne = array(
+            'Gender_Information' => array(
+                                    'className' => 'Gender_Information',
+                        )
         );
       //  public $belongsTo = array(
         //        'Patient' => array(
