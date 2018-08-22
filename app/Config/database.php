@@ -63,6 +63,7 @@
 class DATABASE_CONFIG {
 
 	public $default = array(
+		//'datasource' => 'Datasources.ArraySource',
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',

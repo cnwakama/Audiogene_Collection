@@ -1,7 +1,9 @@
 <?php
+//App::uses('ArraySource','Datasources.Model/DataSource');
 class AudiogramsController extends AppController{
 	public $helpers = array('Html', 'Form');
-
+	public $newData = ' ';
+	public $useDbConfig = 'array';
 	
 
 	public function index(){
@@ -18,20 +20,32 @@ class AudiogramsController extends AppController{
 		$path = '/app/';
 		$this->set('picture', $picture);
 		$this->set('info', $info);
-	           //	$this->set('newData', $this->data);
+	        $this->set('newData', $this->newData);
 		//$this->render();
 		// Get JSON encoded data submitted to a PUT/POST action
 		if ($this->request->is('post')){
+			//$this->Session->setFlash('The Post has been saved');
 			$data = json_decode($this->request->data['object'], true);
-                                    $this->Audiogram->create($data);
-                                    $this->set('newData', $data);
-                                    return $this->redirect(array('controller' => 'audiograms', 'action' => 'insert'));
+                                   //$this->Audiogram->create($data);
+				  // $this->Audiogram->Loss_hearing->create($data);
+				//$this->request->data = $this->Audiogram->Loss_hearing->data;
+				$this->Audiogram->create($data);
+				//$this->Audiogram->id = 1;
+				$this->request->data = $this->Audiogram->data;
+				$this->Audiogram->id = 1;
+			//$this->Audiogram->create();
+			//$this->Audiogram->data = $this->Audiogram->read(null, 1);
+		//	$this->Audiogram->create();
+                                    $this->set('newData', $this->request->data);
+			$this->render('/Audiograms/insert');
+                        //return $this->redirect(array('controller' => 'audiograms', 'action' => 'insert'));
 			if ($this->Audiogram->saveAssociated($data)){
                                         $this->Session->setFlash('The Post has been saved');
                                 }
                             	else{
                                         $this->Session->setFlash('Error.');
                                 }
+			//debug($this->Audiogram->validationErrors);
 			$this->render('/Audiograms/insert');
 			//$data = $this->request->input('json_decode', true);
 			//$data = json_decode($this->request->data['object'], true);
