@@ -8256,3 +8256,309 @@ Stack Trace:
 #2 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
 #4 {main}
+2018-08-22 12:26:12 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/html/audiogene_collection/app/Controller/PatientsController.php, line 60]
+2018-08-22 12:26:12 Error: [FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 60, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 60, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-22 12:26:19 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/html/audiogene_collection/app/Controller/PatientsController.php, line 60]
+2018-08-22 12:26:19 Error: [FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 60, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 60, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-22 12:26:20 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/html/audiogene_collection/app/Controller/PatientsController.php, line 60]
+2018-08-22 12:26:20 Error: [FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /index.php/patients/
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 60, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 60, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-22 12:26:31 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/html/audiogene_collection/app/Controller/PatientsController.php, line 60]
+2018-08-22 12:26:31 Error: [FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 60, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 60, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-22 12:26:32 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/html/audiogene_collection/app/Controller/PatientsController.php, line 60]
+2018-08-22 12:26:32 Error: [FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 60, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 60, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-22 12:31:18 Error: Fatal Error (1): Call to undefined function formatter() in [/var/www/html/audiogene_collection/app/Controller/PatientsController.php, line 59]
+2018-08-22 12:31:18 Error: [FatalErrorException] Call to undefined function formatter()
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/html/a...', 59)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/html/a...', 59, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/html/a...', 59, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-22 12:31:55 Error: Fatal Error (1): Call to a member function saveAll() on a non-object in [/var/www/html/audiogene_collection/app/Controller/PatientsController.php, line 61]
+2018-08-22 12:31:55 Error: [FatalErrorException] Call to a member function saveAll() on a non-object
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/a...', 61)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/a...', 61, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/a...', 61, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-22 12:33:11 Error: Fatal Error (1): Call to a member function saveAll() on a non-object in [/var/www/html/audiogene_collection/app/Controller/PatientsController.php, line 61]
+2018-08-22 12:33:11 Error: [FatalErrorException] Call to a member function saveAll() on a non-object
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/a...', 61)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/a...', 61, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/a...', 61, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-22 12:34:24 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/html/audiogene_collection/app/Controller/PatientsController.php, line 9]
+2018-08-22 12:34:24 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /index.php/patients/
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/a...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/a...', 9, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/a...', 9, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-22 12:34:32 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/html/audiogene_collection/app/Controller/PatientsController.php, line 9]
+2018-08-22 12:34:32 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /index.php/patients/
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/a...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/a...', 9, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/a...', 9, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-22 12:34:38 Error: [MissingActionException] Action AudiogramsController::Audiogram_Mon_Aug_20_12:28:48_CDT_2018.jpeg() could not be found.
+Exception Attributes: array (
+  'controller' => 'AudiogramsController',
+  'action' => 'Audiogram_Mon_Aug_20_12:28:48_CDT_2018.jpeg',
+)
+Request URL: /index.php/audiograms/Audiogram_Mon_Aug_20_12:28:48_CDT_2018.jpeg
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AudiogramsController), Object(CakeRequest))
+#2 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#4 {main}
+2018-08-22 12:38:38 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Patient), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(61): Model->saveAll(Array)
+#8 [internal function]: PatientsController->insert()
+#9 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#10 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#12 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#14 {main}
+2018-08-22 14:26:18 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Patient), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(61): Model->saveAssociated(Array, Array)
+#7 [internal function]: PatientsController->insert()
+#8 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#9 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#11 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#13 {main}
+2018-08-22 14:39:01 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`audiograms`, CONSTRAINT `audiograms_ibfk_1` FOREIGN KEY (`PatientID`) REFERENCES `patients` (`PatientID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Audiogram), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(61): Model->saveAssociated(Array, Array)
+#9 [internal function]: PatientsController->insert()
+#10 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#11 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#15 {main}
+2018-08-22 14:54:40 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`audiograms`, CONSTRAINT `audiograms_ibfk_1` FOREIGN KEY (`PatientID`) REFERENCES `patients` (`PatientID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Audiogram), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(61): Model->saveAssociated(Array, Array)
+#9 [internal function]: PatientsController->insert()
+#10 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#11 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#15 {main}
+2018-08-22 15:02:49 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`audiograms`, CONSTRAINT `audiograms_ibfk_1` FOREIGN KEY (`PatientID`) REFERENCES `patients` (`PatientID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Audiogram), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(61): Model->saveAssociated(Array, Array)
+#9 [internal function]: PatientsController->insert()
+#10 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#11 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#15 {main}
+2018-08-22 15:08:47 Error: [MissingActionException] Action AudiogramsController::Audiogram_Mon_Aug_20_12:28:48_CDT_2018.jpeg() could not be found.
+Exception Attributes: array (
+  'controller' => 'AudiogramsController',
+  'action' => 'Audiogram_Mon_Aug_20_12:28:48_CDT_2018.jpeg',
+)
+Request URL: /index.php/audiograms/Audiogram_Mon_Aug_20_12:28:48_CDT_2018.jpeg
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AudiogramsController), Object(CakeRequest))
+#2 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#4 {main}
+2018-08-22 15:09:03 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`audiograms`, CONSTRAINT `audiograms_ibfk_1` FOREIGN KEY (`PatientID`) REFERENCES `patients` (`PatientID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Audiogram), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(62): Model->saveAssociated(Array, Array)
+#9 [internal function]: PatientsController->insert()
+#10 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#11 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#15 {main}
+2018-08-22 15:20:46 Error: [MissingTableException] Table gender__informations for model Gender_Information was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'gender__informations',
+  'class' => 'Gender_Information',
+  'ds' => 'default',
+)
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(3673): Model->setSource('gender__informa...')
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1394): Model->getDataSource()
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1260): Model->schema()
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1219): Model->_setAliasData(Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/ModelValidator.php(134): Model->set(Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2659): ModelValidator->validateAssociated(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/ModelValidator.php(151): Model->validateAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2659): ModelValidator->validateAssociated(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2463): Model->validateAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#10 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#11 [internal function]: PatientsController->insert()
+#12 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#15 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#17 {main}
+2018-08-22 15:21:19 Error: [MissingTableException] Table family__members for model Family_Member was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'family__members',
+  'class' => 'Family_Member',
+  'ds' => 'default',
+)
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(3673): Model->setSource('family__members')
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1394): Model->getDataSource()
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1260): Model->schema()
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1219): Model->_setAliasData(Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1808): Model->set(Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#9 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#10 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#11 [internal function]: PatientsController->insert()
+#12 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#15 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#17 {main}
+2018-08-22 16:11:49 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`gender_informations`, CONSTRAINT `gender_informations_ibfk_1` FOREIGN KEY (`PatientID`) REFERENCES `patients` (`PatientID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Gender_information), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2549): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#8 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#9 [internal function]: PatientsController->insert()
+#10 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#11 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#15 {main}

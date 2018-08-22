@@ -32,13 +32,15 @@ class PatientsController extends AppController{
       $a = array();
       for ($x = 0; $x < count($path); $x++)
         {
-              array_push($a, array('AudiogramID' => $x + 1, 'Age' => $json['Age'], 'AudioPic' => $path[$x]));
+              array_push($a, array('PatientID' => 1, 'AudiogramID' => $x + 1, 'Age' => $json['Age'], 'AudioPic' => $path[$x]));
         }
       $new = array(
-        'Patient' => array('Gender' => $json['Gender'], 'Ethnicity' => $json['Ethnicity'], 'PatientID' => 1),
-        'Gender_information' => array('FamilyID' => 1, 'Inheritane_Pattern' => $json['Inheritane_Pattern'], 'Genetic_Diagnosis' => $json['Genetic_Diagnosis']),
-        'Family_member' => array('MemberID' => 1, 'Relationship' => $json['Relationship']),
-        'Audiogram' => $a,
+        'Patient' => array('Gender' => $json['Gender'], 'Ethnicity' => $json['Ethnicity'], 'PatientID' => 1,
+		'Audiogram' => $a, 'Gender_information' => array('FamilyID' => 1, 'Inheritance_Pattern' => $json['Inheritance_Pattern'], 'Genetic_Diagnosis' => $json['Genetic_Diagnosis']),
+		'Family_member' => array('MemberID' => 1, 'Relationship' => $json['Relationship'])),
+        //'Gender_information' => array('FamilyID' => 1, 'Inheritance_Pattern' => $json['Inheritance_Pattern'], 'Genetic_Diagnosis' => $json['Genetic_Diagnosis']),
+        //'Family_member' => array('MemberID' => 1, 'Relationship' => $json['Relationship']),
+        //'Audiogram' => $a,
       );
       
       return $new;
@@ -52,13 +54,13 @@ class PatientsController extends AppController{
 	 */  
 	public function insert(){
 	            $path = array('/path/');
-
+			$this->set('newData', '');
 		// Get JSON encoded data submitted to a PUT/POST action
 		if ($this->request->is('post')){
 			$data = json_decode($this->request->data['object'], true);
-                                    $newData = formatter($data, $path);
-                                    $this->set->('newData', $newData);
-			if ($this->Audiogram->saveAll($data)){
+                                    $newData = $this->formatter($data, $path);
+                                    $this->set('newData', $newData);
+			if ($this->Patient->saveAll($newData, array('deep' => true))){
                                         $this->Session->setFlash('The Post has been saved');
                                 }
                             	else{

@@ -5,14 +5,14 @@ class Patient extends AppModel{
             'Audiogram' => array(
                         'className' => 'Audiogram',
                 ),
-	'Family_Member' => array(
-	            'className' => 'Family_Member',
+	'Family_member' => array(
+	            'className' => 'Family_member',
 		),
         );
 
         public $hasOne = array(
-            'Gender_Information' => array(
-                                    'className' => 'Gender_Information',
+            'Gender_information' => array(
+                                    'className' => 'Gender_information',
                         )
         );
       //  public $belongsTo = array(
