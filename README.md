@@ -7,3 +7,47 @@ The app sends data to an URL where the Controller is called to distact JSON and 
 
 ### Model
 Variables are set to represent the structure of the database the framework points to when it is Configured. This produces a schema below:
+
+Array
+           (
+               [Patient] => Array
+                   (
+                       [Gender] => Male
+                       [Ethnicity] => White
+                       [PatientID] => 1
+                       [Audiogram] => Array
+                           (
+                               [0] => Array
+                                   (
+                                       [AudiogramID] => 1
+                                       [Age] => 0
+                                       [AudioPic] => /path/
+                                   )
+
+                           )
+
+                       [Gender_information] => Array
+                           (
+                               [0] => Array
+                                   (
+                                       [FamilyID] => 1
+                                       [Inheritance_Pattern] => Dominant
+                                       [Genetic_Diagnosis] => DFNA1
+                                   )
+
+                           )
+
+                       [Family_member] => Array
+                           (
+                               [0] => Array
+                                   (
+                                       [MemberID] => 1
+                                       [Relationship] => Father
+                                   )
+
+                           )
+
+                   )
+
+           )
+
