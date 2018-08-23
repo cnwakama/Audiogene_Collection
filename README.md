@@ -9,7 +9,8 @@ The app sends data to an URL where the Controller is called to distact JSON and 
 Variables are set to represent the structure of the database the framework points to when it is Configured. This produces a schema below:
 
 
-``` Array
+``` 
+Array
            (
                [Patient] => Array
                    (
