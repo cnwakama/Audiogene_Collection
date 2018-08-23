@@ -8562,3 +8562,664 @@ Stack Trace:
 #13 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #14 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
 #15 {main}
+2018-08-23 06:03:08 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/var/www/html/audiogene_collection/app/Controller/PatientsController.php, line 44]
+2018-08-23 06:03:08 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 44)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 44, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 44, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-23 06:05:23 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`gender_informations`, CONSTRAINT `gender_informations_ibfk_1` FOREIGN KEY (`PatientID`) REFERENCES `patients` (`PatientID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Gender_information), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2549): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#8 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#9 [internal function]: PatientsController->insert()
+#10 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#11 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#15 {main}
+2018-08-23 06:33:27 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`family_members`, CONSTRAINT `family_members_ibfk_2` FOREIGN KEY (`FamilyID`) REFERENCES `gender_informations` (`FamilyID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Family_member), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#10 [internal function]: PatientsController->insert()
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-23 06:44:00 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`family_members`, CONSTRAINT `family_members_ibfk_2` FOREIGN KEY (`FamilyID`) REFERENCES `gender_informations` (`FamilyID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Family_member), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#10 [internal function]: PatientsController->insert()
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-23 07:02:13 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`family_members`, CONSTRAINT `family_members_ibfk_2` FOREIGN KEY (`FamilyID`) REFERENCES `gender_informations` (`FamilyID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Family_member), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#10 [internal function]: PatientsController->insert()
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-23 07:05:24 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`gender_informations`, CONSTRAINT `gender_informations_ibfk_1` FOREIGN KEY (`PatientID`) REFERENCES `patients` (`PatientID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Gender_information), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2549): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#8 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#9 [internal function]: PatientsController->insert()
+#10 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#11 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#15 {main}
+2018-08-23 08:31:13 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`gender_informations`, CONSTRAINT `gender_informations_ibfk_1` FOREIGN KEY (`PatientID`) REFERENCES `patients` (`PatientID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Gender_information), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2549): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#8 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#9 [internal function]: PatientsController->insert()
+#10 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#11 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#15 {main}
+2018-08-23 08:32:26 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`family_members`, CONSTRAINT `family_members_ibfk_2` FOREIGN KEY (`FamilyID`) REFERENCES `gender_informations` (`FamilyID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Family_member), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#10 [internal function]: PatientsController->insert()
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-23 08:34:54 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`family_members`, CONSTRAINT `family_members_ibfk_2` FOREIGN KEY (`FamilyID`) REFERENCES `gender_informations` (`FamilyID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Family_member), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#10 [internal function]: PatientsController->insert()
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-23 08:37:39 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`family_members`, CONSTRAINT `family_members_ibfk_2` FOREIGN KEY (`FamilyID`) REFERENCES `gender_informations` (`FamilyID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Family_member), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#10 [internal function]: PatientsController->insert()
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-23 08:38:24 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`family_members`, CONSTRAINT `family_members_ibfk_2` FOREIGN KEY (`FamilyID`) REFERENCES `gender_informations` (`FamilyID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Family_member), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#10 [internal function]: PatientsController->insert()
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-23 08:40:03 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Gender_information), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#10 [internal function]: PatientsController->insert()
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-23 08:45:11 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Gender_information), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#10 [internal function]: PatientsController->insert()
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-23 08:56:47 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Gender_information), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#10 [internal function]: PatientsController->insert()
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-23 09:02:18 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Gender_information), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#10 [internal function]: PatientsController->insert()
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-23 09:09:27 Error: [MissingControllerException] Controller class AudiogramMonAug2012:28:48CDT2018.jpegController could not be found.
+Exception Attributes: array (
+  'class' => 'AudiogramMonAug2012:28:48CDT2018.jpegController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/Audiogram_Mon_Aug_20_12:28:48_CDT_2018.jpeg
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-23 09:10:26 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Gender_information), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#10 [internal function]: PatientsController->insert()
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-23 09:19:39 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Gender_information), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#10 [internal function]: PatientsController->insert()
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-23 09:20:48 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`family_members`, CONSTRAINT `family_members_ibfk_2` FOREIGN KEY (`FamilyID`) REFERENCES `gender_informations` (`FamilyID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Family_member), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#10 [internal function]: PatientsController->insert()
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-23 09:22:14 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`family_members`, CONSTRAINT `family_members_ibfk_2` FOREIGN KEY (`FamilyID`) REFERENCES `gender_informations` (`FamilyID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Family_member), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#10 [internal function]: PatientsController->insert()
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-23 09:27:45 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Gender_information), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#10 [internal function]: PatientsController->insert()
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-23 09:45:53 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Gender_information), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(63): Model->saveAll(Array, Array)
+#10 [internal function]: PatientsController->insert()
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-23 09:53:00 Error: Fatal Error (4): syntax error, unexpected ',' in [/var/www/html/audiogene_collection/app/Controller/PatientsController.php, line 40]
+2018-08-23 09:53:00 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 40, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 40, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-23 09:53:56 Error: Fatal Error (4): syntax error, unexpected ',' in [/var/www/html/audiogene_collection/app/Controller/PatientsController.php, line 40]
+2018-08-23 09:53:56 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 40, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 40, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-23 10:28:40 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/login
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-23 13:15:44 Error: Fatal Error (4): syntax error, unexpected ''foreignKey'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [/var/www/html/audiogene_collection/app/Model/Patient.php, line 15]
+2018-08-23 13:15:44 Error: [FatalErrorException] syntax error, unexpected ''foreignKey'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 15)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 15, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 15, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-23 13:16:53 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/var/www/html/audiogene_collection/app/Model/Patient.php, line 16]
+2018-08-23 13:16:53 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 16)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 16, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 16, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-23 13:17:29 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Gender_information), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(64): Model->saveAssociated(Array, Array)
+#9 [internal function]: PatientsController->insert()
+#10 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#11 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#15 {main}
+2018-08-23 13:56:16 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Gender_information), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(64): Model->saveAssociated(Array, Array)
+#9 [internal function]: PatientsController->insert()
+#10 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#11 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#15 {main}
+2018-08-23 13:57:29 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`audiogene_collection`.`family_members`, CONSTRAINT `family_members_ibfk_2` FOREIGN KEY (`FamilyID`) REFERENCES `gender_informations` (`FamilyID`))
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Family_member), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(64): Model->saveAssociated(Array, Array)
+#9 [internal function]: PatientsController->insert()
+#10 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#11 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#15 {main}
+2018-08-23 14:00:01 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Family_member), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(64): Model->saveAssociated(Array, Array)
+#9 [internal function]: PatientsController->insert()
+#10 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#11 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#15 {main}
+2018-08-23 14:08:39 Error: [MissingControllerException] Controller class AudiogramMonAug2012:28:48CDT2018.jpegController could not be found.
+Exception Attributes: array (
+  'class' => 'AudiogramMonAug2012:28:48CDT2018.jpegController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/Audiogram_Mon_Aug_20_12:28:48_CDT_2018.jpeg
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-23 14:13:59 Error: [MissingControllerException] Controller class AudiogramMonAug2012:28:48CDT2018.jpegController could not be found.
+Exception Attributes: array (
+  'class' => 'AudiogramMonAug2012:28:48CDT2018.jpegController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/Audiogram_Mon_Aug_20_12:28:48_CDT_2018.jpeg
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-23 14:24:06 Error: Fatal Error (4): syntax error, unexpected '}', expecting ')' in [/var/www/html/audiogene_collection/app/Model/Patient.php, line 32]
+2018-08-23 14:24:06 Error: [FatalErrorException] syntax error, unexpected '}', expecting ')'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 32)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 32, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 32, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-23 14:24:58 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [/var/www/html/audiogene_collection/app/Model/Patient.php, line 16]
+2018-08-23 14:24:58 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 16)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 16, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 16, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-23 14:25:30 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Family_member), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(64): Model->saveAssociated(Array, Array)
+#9 [internal function]: PatientsController->insert()
+#10 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#11 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#15 {main}
+2018-08-23 14:30:33 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Family_member), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2350): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(64): Model->saveAssociated(Array, Array)
+#9 [internal function]: PatientsController->insert()
+#10 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#11 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#15 {main}
+2018-08-23 15:08:39 Error: [MissingControllerException] Controller class PatientController could not be found.
+Exception Attributes: array (
+  'class' => 'PatientController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/patient
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-23 15:08:43 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/html/audiogene_collection/app/Controller/PatientsController.php, line 9]
+2018-08-23 15:08:43 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /index.php/patients
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/a...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/a...', 9, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/a...', 9, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-23 15:09:19 Error: [MissingControllerException] Controller class GeneticInformationsController could not be found.
+Exception Attributes: array (
+  'class' => 'GeneticInformationsController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/genetic_informations
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-23 15:09:33 Error: [MissingControllerException] Controller class AudiogramMonAug2012:28:48CDT2018.jpegController could not be found.
+Exception Attributes: array (
+  'class' => 'AudiogramMonAug2012:28:48CDT2018.jpegController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/Audiogram_Mon_Aug_20_12:28:48_CDT_2018.jpeg
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}

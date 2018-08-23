@@ -4,11 +4,11 @@ class Family_member extends AppModel {
 	public $belongTo = array(
 		'Patient' => array(
 			'className' => 'Patient',
-			'foreignKey' => 'MemberID',
+			'foreignKey' => 'PatientID',
 		),
 		'Gender_information' => array(
 			'className' => 'Gender_information',
-			'foreignKey' => 'MemberID',
+			'foreignKey' => 'FamilyID',
 		)
 	);	
 }
