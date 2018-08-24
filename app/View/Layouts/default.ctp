@@ -16,21 +16,17 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
-$cakeDescription = __d('cake_dev', 'AudioGene v4');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
 
 		//echo $this->Html->css('cake.generic');
-		echo $this->Html->css('audiogene.theme');
 		echo $this->Html->css('/usermgmt/css/umstyle');
 
 		echo $this->fetch('meta');
@@ -49,13 +45,6 @@ $cakeDescription = __d('cake_dev', 'AudioGene v4');
 	</div>	
 	<div id="container">
 		<div id="masthead">
-						<h1 id="main-logo" style="margin: 0;">
-							<a href="/" title="AudioGene">
-								<span></span>
-							</a>
-						</h1>
-						<ul class="links" id="navlist"><li class="first menu-1-1-2"><a href="https://genome.uiowa.edu" class="menu-1-1-2">Center for Bioinformatics and Computational Biology@UIowa</a></li>
-						<li><a href="https://medicine.uiowa.edu/oto" class="menu-1-2-2">Department of Otolaryngology@UIowa</a></li></ul>
 						</div>	
 		<div id="content">
 
@@ -70,7 +59,6 @@ $cakeDescription = __d('cake_dev', 'AudioGene v4');
 								<div id="footer-copyright-message">
 	 <div class="block-title" id="block-block-2"><strong></strong></div>
 
-© Copyright 2012-<?php echo date("Y"); ?>, Center for Bioinformatics and Computational Biology at The University of Iowa
 </div>
 							</div><!-- /rbcontent -->
 						<div class="rbbot"><div></div></div>
@@ -78,6 +66,6 @@ $cakeDescription = __d('cake_dev', 'AudioGene v4');
 			
 		</div>
 	</div>
-	<?php /*echo $this->element('sql_dump');*/ ?>
+	<?php echo $this->element('sql_dump'); ?>
 </body>
 </html>

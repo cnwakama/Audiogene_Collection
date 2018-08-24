@@ -8,6 +8,7 @@ class AudiogramsController extends AppController{
 
 	public function index(){
 		$this->set('audiograms', $this->Audiogram->find('all'));
+                        $this->set('frequencies' $this->Audiogram->Loss_hearing->find('all');
 	}
 
 	/**
@@ -15,7 +16,7 @@ class AudiogramsController extends AppController{
 	 * Gender, Ethnicity, Genetic Diagnose, Inheritance Pattern, FamilyID, Age (conversion from date of birth), Relationship
 	 * Date_of_Collection, PatientID, AudiogramID, MethodID, FamilyID, FrequencyID
 	 */  
-	public function insert(){
+/**	public function insert(){
 		$picture = FALSE;
 		$info = FALSE;
 		$path = '/app/';
@@ -123,5 +124,5 @@ class AudiogramsController extends AppController{
 
 
 	}
-}
+}*/
 }

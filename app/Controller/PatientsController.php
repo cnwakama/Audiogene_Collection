@@ -27,24 +27,69 @@ class PatientsController extends AppController{
     *                    )
     *    );
   **/
-  public function formatter($json, $path)
+  private function formatter($json)
     {
       $a = array();
+      $path = array();
+      for (int $i = 0; $i < count($json['files']); $i++)
+      {
+        $binary =/**$newData['upload_file'];*/ base64_decode($json['file'][$i]]);
+        $this->response->type('bitmap; charset=utf-8');
+        array_push($path, WWW_ROOT . 'img/Audiograms/' . $json['names'][$i])
+        $file = fopen($path[$i], 'wb');
+        fwrite($file, $binary);
+        fclose($file);
+      }
+
+      //producing IDs and checking if they are in the database
+      do
+      {
+        $randID = rand(100000, 999999);
+
+      }while ($this->Patient->Audiogram->hasAny(['AudiogramID' => $randID]));
+      $c = $randID;
+
+      do
+      {
+        $randID = rand(100000, 999999);
+
+      }while ($this->Patient->hasAny(['AudiogramID' => $randID]));
+      $y = $randID;
+
+      do
+      {
+        $randID = rand(100000, 999999);
+
+      }while ($this->Patient->Gender_information->hasAny(['AudiogramID' => $randID]));
+      $z = $randID;
+
+      do
+      {
+        $randID = rand(100000, 999999);
+
+      }while ($this->Patient->Family_member->hasAny(['AudiogramID' => $randID]));
+      $b = $randID;
+
+
+
+
       for ($x = 0; $x < count($path); $x++)
         {
-              array_push($a, array(/**'PatientID' => 1,*/ 'AudiogramID' =>$x + 1, 'Age' => $json['Age'], 'AudioPic' => $path[$x]));
+              array_push($a, array('AudiogramID' =>$x + $c, 'Age' => $json['Age'], 'AudioPic' => $path[$x]));
         }
       $new = array(
-        'Patient' => array('Gender' => $json['Gender'], 'Ethnicity' => $json['Ethnicity'], 'PatientID' => 1,//),
-		'Audiogram' => $a, 'Gender_information' => array(array('FamilyID' => 1, 'Inheritance_Pattern' => $json['Inheritance_Pattern'], 'Genetic_Diagnosis' => $json['Genetic_Diagnosis'])),
-		'Family_member' => array(array('MemberID' => 1, 'Relationship' => $json['Relationship'])),)
-        //'Gender_information' => array(/**'PatientID' => 1,*/'FamilyID' => 1, 'Inheritance_Pattern' => $json['Inheritance_Pattern'], 'Genetic_Diagnosis' => $json['Genetic_Diagnosis']),
-        //'Family_member' => array('FamilyID' => 1, 'MemberID' => 1, 'Relationship' => $json['Relationship']),
-        //'Audiogram' => $a,
+        'Patient' => array('Gender' => $json['Gender'], 'Ethnicity' => $json['Ethnicity'], 'PatientID' => $c,
+		    'Audiogram' => $a, 
+        'Gender_information' => array(
+          array('FamilyID' => $y, 'Inheritance_Pattern' => $json['Inheritance_Pattern'], 'Genetic_Diagnosis' => $json['Genetic_Diagnosis'])),
+		    'Family_member' => array(
+          array('MemberID' => $z, 'Relationship' => $json['Relationship'])),)
       );
       
       return $new;
     }
+
+  
 
     
 	/**
@@ -52,8 +97,23 @@ class PatientsController extends AppController{
 	 * Gender, Ethnicity, Genetic Diagnose, Inheritance Pattern, FamilyID, Age (conversion from date of birth), Relationship
 	 * Date_of_Collection, PatientID, AudiogramID, MethodID, FamilyID, FrequencyID
 	 */  
-	public function insert(){
-	            $path = array('/path/');
+  public function insert(){
+    if ($this->request->is('post'))
+    {
+      $data = json_decode($this->request->data['object'], true);
+      $formattedData = $this->formatter($data);
+
+      if ($this->Patient->saveAll($newData, array('deep' => true)))
+      {
+        $this->Session->setFlash('The Post has been saved');
+      }
+      else
+      {
+        $this->Session->setFlash('Error.');
+      }
+      $this->render('/Patients/insert');
+    }
+	  /**          $path = array('/path/');
 			$this->set('newData', '');
 		// Get JSON encoded data submitted to a PUT/POST action
 		if ($this->request->is('post')){
@@ -135,6 +195,6 @@ class PatientsController extends AppController{
 	//$this->render();
   //              $this->set('picture', $picture);
 
-	//return $this->redirect(array('controller' => 'audiograms', 'action' => 'insert'));
+	//return $this->redirect(array('controller' => 'audiograms', 'action' => 'insert'));*/
 }
 }
