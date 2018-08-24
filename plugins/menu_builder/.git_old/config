@@ -1,0 +1,12 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+[remote "origin"]
+	fetch = +refs/heads/*:refs/remotes/origin/*
+	url = git://github.com/torifat/cake-menu_builder.git
+[branch "2.0"]
+	remote = origin
+	merge = refs/heads/2.0

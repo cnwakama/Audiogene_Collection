@@ -24,7 +24,10 @@
 
 // Setup a 'default' cache configuration for use in the application.
 Cache::config('default', array('engine' => 'File'));
-CakePlugin::loadAll();
+//CakePlugin::loadAll();
+CakePlugin::loadAll(array(
+            'Usermgmt' => array('routes' => true, 'bootstrap' => true),
+        ));
 /**
  * The settings below can be used to set additional paths to models, views and controllers.
  *

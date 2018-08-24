@@ -9223,3 +9223,862 @@ Stack Trace:
 #0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
 #2 {main}
+2018-08-24 07:55:10 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Gender_information), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2549): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(64): Model->saveAssociated(Array, Array)
+#8 [internal function]: PatientsController->insert()
+#9 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#10 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#12 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#14 {main}
+2018-08-24 08:42:26 Error: [MissingPluginException] Plugin MenuBuilder could not be found.
+Exception Attributes: array (
+  'plugin' => 'MenuBuilder',
+)
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(227): CakePlugin::path('MenuBuilder')
+#1 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(549): App::path('View/Helper', 'MenuBuilder')
+#2 [internal function]: App::load('MenuBuilderHelp...')
+#3 [internal function]: spl_autoload_call('MenuBuilderHelp...')
+#4 /var/www/html/audiogene_collection/lib/Cake/View/HelperCollection.php(130): class_exists('MenuBuilderHelp...')
+#5 /var/www/html/audiogene_collection/lib/Cake/View/View.php(907): HelperCollection->load('MenuBuilder.Men...', Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/View/View.php(354): View->loadHelpers()
+#7 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(1263): View->__construct(Object(PagesController))
+#8 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(949): Controller->_getViewObject()
+#9 /var/www/html/audiogene_collection/app/Controller/PagesController.php(72): Controller->render('home')
+#10 [internal function]: PagesController->display('home')
+#11 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#12 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#16 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA2notAnotB.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA2notAnotB.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA2notAnotB.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA2A.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA2A.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA2A.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA4A.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA4A.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA4A.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA3A.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA3A.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA3A.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA1.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA1.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA1.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA2B.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA2B.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA2B.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA5.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA5.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA5.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA61438.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA61438.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA6_14_38.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA4B.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA4B.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA4B.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA812.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA812.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA8_12.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA16.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA16.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA16.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA9.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA9.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA9.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA13.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA13.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA13.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA11.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA11.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA11.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA10.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA10.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA10.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA18.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA18.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA18.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA15.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA15.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA15.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA17.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA17.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA17.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA2026.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA2026.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA20_26.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA21.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA21.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA21.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA22.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA22.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA22.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:46 Error: [MissingControllerException] Controller class DFNA24.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA24.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA24.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:47 Error: [MissingControllerException] Controller class DFNA25.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA25.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA25.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:47 Error: [MissingControllerException] Controller class DFNA27.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA27.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA27.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:47 Error: [MissingControllerException] Controller class DFNA28.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA28.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA28.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:47 Error: [MissingControllerException] Controller class DFNA31.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA31.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA31.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:47 Error: [MissingControllerException] Controller class DFNA33.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA33.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA33.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:47 Error: [MissingControllerException] Controller class DFNA36A.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA36A.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA36A.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:47 Error: [MissingControllerException] Controller class DFNA36notA.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA36notA.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA36notA.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:47 Error: [MissingControllerException] Controller class DFNA41.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA41.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA41.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:47 Error: [MissingControllerException] Controller class DFNA43.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA43.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA43.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:47 Error: [MissingControllerException] Controller class DFNA44.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA44.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA44.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:47 Error: [MissingControllerException] Controller class DFNA50.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA50.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA50.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:47 Error: [MissingControllerException] Controller class DFNA57.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA57.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA57.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:47 Error: [MissingControllerException] Controller class DFNA59.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA59.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA59.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:50:51 Error: [MissingControllerException] Controller class LossHearingController could not be found.
+Exception Attributes: array (
+  'class' => 'LossHearingController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/Loss_hearing
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 08:56:22 Error: [MissingControllerException] Controller class LossHearingController could not be found.
+Exception Attributes: array (
+  'class' => 'LossHearingController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/Loss_hearing
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA2B.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA2B.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA2B.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA3A.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA3A.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA3A.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA1.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA1.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA1.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA2notAnotB.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA2notAnotB.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA2notAnotB.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA2A.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA2A.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA2A.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA4A.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA4A.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA4A.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA812.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA812.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA8_12.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA10.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA10.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA10.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA2026.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA2026.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA20_26.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA27.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA27.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA27.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA5.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA5.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA5.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA21.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA21.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA21.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA11.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA11.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA11.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA22.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA22.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA22.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA24.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA24.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA24.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA4B.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA4B.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA4B.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA13.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA13.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA13.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA15.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA15.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA15.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA61438.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA61438.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA6_14_38.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA18.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA18.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA18.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA16.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA16.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA16.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA17.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA17.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA17.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA25.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA25.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA25.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA9.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA9.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA9.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA28.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA28.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA28.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA33.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA33.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA33.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA31.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA31.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA31.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA36A.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA36A.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA36A.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA36notA.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA36notA.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA36notA.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:01 Error: [MissingControllerException] Controller class DFNA41.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA41.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA41.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:02 Error: [MissingControllerException] Controller class DFNA43.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA43.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA43.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:02 Error: [MissingControllerException] Controller class DFNA44.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA44.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA44.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:02 Error: [MissingControllerException] Controller class DFNA57.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA57.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA57.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:02 Error: [MissingControllerException] Controller class DFNA50.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA50.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA50.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:05:02 Error: [MissingControllerException] Controller class DFNA59.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'DFNA59.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/DFNA59.png
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-24 09:35:04 Error: Fatal Error (4): syntax error, unexpected end of file in [/var/www/html/audiogene_collection/app/View/Audiograms/index.ctp, line 70]
+2018-08-24 09:35:04 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /index.php/audiograms/
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 70)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 70, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 70, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-24 09:36:07 Error: Fatal Error (4): syntax error, unexpected end of file in [/var/www/html/audiogene_collection/app/View/Audiograms/index.ctp, line 70]
+2018-08-24 09:36:07 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /index.php/audiograms/
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 70)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 70, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 70, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-24 09:36:34 Error: Fatal Error (4): syntax error, unexpected end of file in [/var/www/html/audiogene_collection/app/View/Audiograms/index.ctp, line 67]
+2018-08-24 09:36:34 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /index.php/audiograms/
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 67)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 67, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 67, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-24 09:38:01 Error: Fatal Error (4): syntax error, unexpected end of file in [/var/www/html/audiogene_collection/app/View/Audiograms/index.ctp, line 67]
+2018-08-24 09:38:01 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /index.php/audiograms/
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 67)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 67, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 67, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-24 09:44:30 Error: Fatal Error (4): syntax error, unexpected end of file in [/var/www/html/audiogene_collection/app/View/Audiograms/index.ctp, line 67]
+2018-08-24 09:44:30 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /index.php/audiograms/
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 67)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 67, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 67, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-24 09:46:19 Error: Fatal Error (4): syntax error, unexpected end of file in [/var/www/html/audiogene_collection/app/View/Audiograms/index.ctp, line 55]
+2018-08-24 09:46:19 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /index.php/audiograms/
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 55)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 55, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 55, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-24 09:47:01 Error: Fatal Error (4): syntax error, unexpected end of file in [/var/www/html/audiogene_collection/app/View/Audiograms/index.ctp, line 55]
+2018-08-24 09:47:01 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /index.php/audiograms/
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 55)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 55, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 55, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-24 09:47:25 Error: Fatal Error (4): syntax error, unexpected end of file in [/var/www/html/audiogene_collection/app/View/Audiograms/index.ctp, line 54]
+2018-08-24 09:47:25 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /index.php/audiograms/
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 54)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 54, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 54, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-24 11:05:21 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /index.php/patients/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `au...', Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `au...')
+#3 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Gender_information), Array, Array)
+#4 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2515): Model->save(Array, Array)
+#6 /var/www/html/audiogene_collection/lib/Cake/Model/Model.php(2549): Model->saveAssociated(Array, Array)
+#7 /var/www/html/audiogene_collection/app/Controller/PatientsController.php(64): Model->saveAssociated(Array, Array)
+#8 [internal function]: PatientsController->insert()
+#9 /var/www/html/audiogene_collection/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#10 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/audiogene_collection/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#12 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#14 {main}

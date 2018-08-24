@@ -59,7 +59,7 @@ class PatientsController extends AppController{
 		if ($this->request->is('post')){
 			$data = json_decode($this->request->data['object'], true);
                                     $newData = $this->formatter($data, $path);
-                                    $this->set('newData', $newData);
+                                    //$this->set('newData', $newData);
 					//SaveAll
 			if ($this->Patient->saveAssociated($newData, array('deep' => true))){
                                         $this->Session->setFlash('The Post has been saved');

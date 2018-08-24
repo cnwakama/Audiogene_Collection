@@ -1,0 +1,10 @@
+div.rbroundbox {
+	//position: relative;
+	visibility: hidden;
+}
+
+div.rbroundbox div.rbcontent{
+   // position: absolute;
+ //	bottom: 0px;
+	visibility: hidden;
+}

@@ -20,7 +20,7 @@
  */
 
 App::uses('Controller', 'Controller');
-App::uses('ArraySource','Datasources.Model/DataSource');
+//App::uses('ArraySource','Datasources.Model/DataSource');
 /**
  * Application Controller
  *
@@ -31,14 +31,62 @@ App::uses('ArraySource','Datasources.Model/DataSource');
  * @link		https://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-	var $helpers = array('Form', 'Html', 'Session', 'Js');
+//	var $helpers = array('Form', 'Html', 'Session', 'Js');
 #, 'MenuBuilder.MenuBuilder');
         public $components = array('Session','RequestHandler');
 #, 'Menu.MenuBuilder');
 
-	public function beforeFilter() {
-    		parent::beforeFilter();
-	}
+var $helpers = array('Form', 'Html', 'Session', 'Js', 'MenuBuilder.MenuBuilder');
+                function beforeFilter(){
+//                      $this->userAuth();
+
+                        // Define your menu
+    $menu = array(
+        'left-menu' => array(
+                        array(
+                'title' => 'Home',
+                'url' => "/",
+            ),
+
+            array(
+                'title' => 'Add/Modify Data',
+                'url' => array('controller' => 'Loss_hearing', 'action' => 'index'),
+            ),
+
+            array(
+                'title' => 'Audiograms',
+                'url' => array('controller' => 'audiograms', 'action' => 'index'),
+            ),
+		
+	array(
+                'title' => 'AudioGene',
+                'url' => 'https://www.audiogene.eng.uiowa.edu',
+            ),
+	array(
+                'title' => 'Citing Us',
+                'url' => array('controller' => 'pages', 'action' => 'citing_us'),
+            ),
+
+            array(
+                'title' => 'Contact Us',
+                'url' => array('controller' => 'pages', 'action' => 'contact_us'),
+            ),
+
+            array(
+                'title' => 'Molecular Otolaryngology & Renal Research Laboratory (MORL)',
+                'url' => 'https://www.medicine.uiowa.edu/morl/',
+            ),
+
+        ),
+    );
+
+    // For default settings name must be menu
+    $this->set(compact('menu'));
+                }
+
+                private function userAuth(){
+                        $this->UserAuth->beforeFilter($this);
+                }
 
 	/**
      * uploads files to the server

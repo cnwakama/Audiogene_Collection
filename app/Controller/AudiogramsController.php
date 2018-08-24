@@ -3,17 +3,13 @@
 class AudiogramsController extends AppController{
 	public $helpers = array('Html', 'Form');
 	public $newData = ' ';
-	public $useDbConfig = 'array';
+	//public $useDbConfig = 'array';
 	
 
 	public function index(){
 		$this->set('audiograms', $this->Audiogram->find('all'));
 	}
 
-            public function formatSchema($data)
-              {
-                
-              }
 	/**
 	 * receiving infomation 
 	 * Gender, Ethnicity, Genetic Diagnose, Inheritance Pattern, FamilyID, Age (conversion from date of birth), Relationship
