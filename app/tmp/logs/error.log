@@ -10082,3 +10082,143 @@ Stack Trace:
 #12 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
 #14 {main}
+2018-08-25 09:23:00 Error: [MissingControllerException] Controller class Www.baidu.com:443Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Www.baidu.com:443Controller',
+  'plugin' => NULL,
+)
+Request URL: /index.php/www.baidu.com:443
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-25 09:23:00 Error: [MissingControllerException] Controller class Www.voanews.com:443Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Www.voanews.com:443Controller',
+  'plugin' => NULL,
+)
+Request URL: /index.php/www.voanews.com:443
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-25 09:23:07 Error: [MissingControllerException] Controller class Cn.bing.com:443Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Cn.bing.com:443Controller',
+  'plugin' => NULL,
+)
+Request URL: /index.php/cn.bing.com:443
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-26 12:51:27 Error: [MissingControllerException] Controller class Www.voanews.com:443Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Www.voanews.com:443Controller',
+  'plugin' => NULL,
+)
+Request URL: /index.php/www.voanews.com:443
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-26 12:51:32 Error: [MissingControllerException] Controller class Www.baidu.com:443Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Www.baidu.com:443Controller',
+  'plugin' => NULL,
+)
+Request URL: /index.php/www.baidu.com:443
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-26 12:51:35 Error: [MissingControllerException] Controller class Cn.bing.com:443Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Cn.bing.com:443Controller',
+  'plugin' => NULL,
+)
+Request URL: /index.php/cn.bing.com:443
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-26 13:57:39 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/var/www/html/audiogene_collection/app/Controller/AudiogramsController.php, line 11]
+2018-08-26 13:57:39 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /index.php/audiograms
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 11, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 11, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-26 13:57:53 Error: [MissingControllerException] Controller class LossHearingController could not be found.
+Exception Attributes: array (
+  'class' => 'LossHearingController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/Loss_hearing
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-26 19:31:18 Error: [MissingControllerException] Controller class Cn.bing.com:443Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Cn.bing.com:443Controller',
+  'plugin' => NULL,
+)
+Request URL: /index.php/cn.bing.com:443
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-26 19:31:19 Error: [MissingControllerException] Controller class Www.voanews.com:443Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Www.voanews.com:443Controller',
+  'plugin' => NULL,
+)
+Request URL: /index.php/www.voanews.com:443
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-26 19:31:20 Error: [MissingControllerException] Controller class Www.baidu.com:443Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Www.baidu.com:443Controller',
+  'plugin' => NULL,
+)
+Request URL: /index.php/www.baidu.com:443
+Stack Trace:
+#0 /var/www/html/audiogene_collection/app/webroot/index.php(120): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/audiogene_collection/index.php(41): require('/var/www/html/a...')
+#2 {main}
+2018-08-27 08:24:01 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/var/www/html/audiogene_collection/app/Controller/AudiogramsController.php, line 11]
+2018-08-27 08:24:01 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /index.php/audiograms/insert
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 11, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 11, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-27 15:34:33 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/var/www/html/audiogene_collection/app/Controller/AudiogramsController.php, line 11]
+2018-08-27 15:34:33 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /index.php/audiograms
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 11, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 11, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-27 15:37:01 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/var/www/html/audiogene_collection/app/Controller/AudiogramsController.php, line 11]
+2018-08-27 15:37:01 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /index.php/audiograms
+Stack Trace:
+#0 /var/www/html/audiogene_collection/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/a...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/a...', 11, Array)
+#2 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/a...', 11, Array)
+#3 /var/www/html/audiogene_collection/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
