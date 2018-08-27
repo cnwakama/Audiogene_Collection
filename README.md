@@ -56,6 +56,7 @@ Array
 
 ### Run using Docker
 Install Docker version 18.03.1-ce
+remove tmp directory
 Run the following code below:
 ```bash
 docker build -t CURRENT_DIRECTORY .
