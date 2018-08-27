@@ -53,3 +53,11 @@ Array
 
            )
 ```
+
+### Run using Docker
+Install Docker version 18.03.1-ce
+Run the following code below:
+```bash
+docker build -t CURRENT_DIRECTORY .
+docker run -it -p 1337:80 -v /LOCATION OF CURRENT_DIRECTORY/.:/var/www/html/audiogene_collection --name audio audiogene_collection
+```
