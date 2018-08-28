@@ -14,8 +14,8 @@ RUN docker-php-ext-install pdo_mysql mysqli
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
 
 # Add cake and composer command to system path
-ENV PATH="${PATH}:/var/www/html/audiogene_collection/lib/Cake/Console"
-ENV PATH="${PATH}:/var/www/html/audiogene_collection/app/Vendor/bin"
+#ENV PATH="${PATH}:/var/www/html/audiogene_collection/lib/Cake/Console"
+#ENV PATH="${PATH}:/var/www/html/audiogene_collection/app/Vendor/bin"
 
 # COPY apache site.conf file
 COPY ./apache/site.conf /etc/apache2/sites-available/000-default.conf
@@ -24,19 +24,19 @@ COPY ./apache/site.conf /etc/apache2/sites-available/000-default.conf
 COPY . .
 
 # Set default working directory
-WORKDIR audiogene_collection
+WORKDIR ./audiogene_collection
 
 # Create tmp directory and make it writable by the web server
-RUN mkdir -p \
-    app/tmp/cache/models \
-    app/tmp/cache/persistent \
-  && chown -R :www-data \
-    app/tmp \
-  && chmod -R 770 \
-    app/tmp
+#RUN mkdir -p \
+#    app/tmp/cache/models \
+#    app/tmp/cache/persistent \
+#  && chown -R :www-data \
+#    app/tmp \
+#  && chmod -R 770 \
+#    app/tmp
 
 # Enable Apache modules and restart
 RUN a2enmod rewrite \
   && service apache2 restart
 
-EXPOSE 3000
+EXPOSE 80
