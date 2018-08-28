@@ -4,7 +4,7 @@ class Loss_Hearing extends AppModel{
         public $belongsTo = array(
                'Audiogram' => array(
                         'className' => 'Audiogram',
-			'foreignKey' => 'FrequencyID',
+	            'foreignKey' => 'AudiogramID',
                 ),
         );
 }

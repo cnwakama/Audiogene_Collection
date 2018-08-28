@@ -26,7 +26,7 @@
 	<?php
 		echo $this->Html->meta('icon');
 
-		//echo $this->Html->css('cake.generic');
+		echo $this->Html->css('cake.generic');
 		echo $this->Html->css('/usermgmt/css/umstyle');
 
 		echo $this->fetch('meta');
@@ -52,20 +52,7 @@
 			
 			<?php echo $this->fetch('content'); ?>
 		</div>
-		<div id="footer">
-			<div class="rbroundbox">
-						<div class="rbtop"><div></div></div>
-							<div class="rbcontent">
-								<div id="footer-copyright-message">
-	 <div class="block-title" id="block-block-2"><strong></strong></div>
-
-</div>
-							</div><!-- /rbcontent -->
-						<div class="rbbot"><div></div></div>
-					</div>
 			
-		</div>
-	</div>
 	<?php echo $this->element('sql_dump'); ?>
 </body>
 </html>

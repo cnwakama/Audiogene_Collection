@@ -2,33 +2,33 @@
 
 <?php
 #Import JS files
-echo $this->Html->script('jquery-1.8.2.min',false);
-echo $this->Html->script('jquery-ui-1.8.21.custom.min',false);
-echo $this->Html->script('fix_ie_console',false);
+#echo $this->Html->script('jquery-1.8.2.min',false);
+#echo $this->Html->script('jquery-ui-1.8.21.custom.min',false);
+#echo $this->Html->script('fix_ie_console',false);
 
 #ref: http://neteye.github.com/activity-indicator.html
 //echo $this->Html->script('jquery.activity-indicator.min',false);
 
 //echo $this->Html->script('results-worker',false);
 
-echo $this->Html->script('highcharts',false);
+//echo $this->Html->script('highcharts',false);
 
-echo $this->Html->script('highcharts.exporting',false);
+//echo $this->Html->script('highcharts.exporting',false);
 
 #echo $this->Html->script('audioprofiles',false);
 
 #echo $this->Html->script('plot_audiogram',false);
 
-echo $this->Html->css('results');
+//echo $this->Html->css('results');
 
 #print_r($audioprofiles[0]['Audioprofiles']);
 
 echo $this->Html->div('patients');
-print_r($audiograms);
+//print_r($audiograms);
+echo $this->Html->image('/img/Audiograms/Audiogram_Mon_Aug_20_15:46:40_CDT_2018.jpeg');
 foreach ($audiograms as $a){
 	//$image = 
-$this->Html->image('/img/Audiograms/
-Audiogram_Mon_Aug_20_15:46:40_CDT_2018.jpeg');
+            echo $this->Html->image('/img/Audiograms/Audiogram_Mon_Aug_20_15:46:40_CDT_2018.jpeg');
 //$a['Audiogram']['AudioPic'];
 	//echo "<img src=$image/>";
 }

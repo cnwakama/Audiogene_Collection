@@ -1,25 +1,17 @@
-version: "3"
+php:
+  build: .
+  dockerfile: ./audiogene_collection/Dockerfile
+  volumes:
+    - ./audiogene_collection:/var/www/html
+  links:
+    - mysql
+  ports:
+    - "3000"
 
-services:
-  app:
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-    volumes:
-      - .:/var/www/html
-    ports:
-      - 8000:80
-    depends_on:
-      - db
-
-db:
-    image: mysql:5
-    volumes:
-      - db-data:/var/lib/mysql
-    environment:
-      MYSQL_DATABASE: cakephp_db
-      MYSQL_ROOT_PASSWORD: root_password
-
-volumes:
-  db-data:
-     external: false
+mysql:
+  build: .
+  volumes: 
+    - audiogene_collection/mysql/:/var/lib/mysql
+  dockerfile: ./audiogene_collection/mysql/Dockerfile
+  ports:
+    - "3306"

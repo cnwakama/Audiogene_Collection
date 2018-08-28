@@ -63,13 +63,15 @@
 class DATABASE_CONFIG {
 
 	public $default = array(
-		//'datasource' => 'Datasources.ArraySource',
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'localhost',
-                        'login' => 'root',
-		//'login' => 'audiogene',
-                        'database' => 'abc123',
+                        //'unix_socket' => 'bouncer.eng.uiowa.edu',
+		'host' => '10.1.1.3',
+                        //'login' => 'audiogene',
+                        'port' => 3306,
+		'login' => 'root',
+                        'password' => 'root',
+                        //'password' => 'cakephp',
 		//'password' => 'oB5OvR2DnMPvikpf',
 		'database' => 'audiogene_collection',
 		'prefix' => '',

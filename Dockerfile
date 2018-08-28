@@ -24,19 +24,19 @@ COPY ./apache/site.conf /etc/apache2/sites-available/000-default.conf
 COPY . .
 
 # Set default working directory
-WORKDIR ../audiogene_collection
+WORKDIR audiogene_collection
 
 # Create tmp directory and make it writable by the web server
 RUN mkdir -p \
-    tmp/cache/models \
-    tmp/cache/persistent \
+    app/tmp/cache/models \
+    app/tmp/cache/persistent \
   && chown -R :www-data \
-    tmp \
+    app/tmp \
   && chmod -R 770 \
-    tmp
+    app/tmp
 
 # Enable Apache modules and restart
 RUN a2enmod rewrite \
   && service apache2 restart
 
-EXPOSE 80
+EXPOSE 3000
