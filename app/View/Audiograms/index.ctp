@@ -27,10 +27,10 @@ echo $this->Html->div('patients');
 //print_r($audiograms);
 echo $this->Html->image('/img/Audiograms/Audiogram_Mon_Aug_20_15:46:40_CDT_2018.jpeg');
 foreach ($audiograms as $a){
-	//$image = 
-            echo $this->Html->image('/img/Audiograms/Audiogram_Mon_Aug_20_15:46:40_CDT_2018.jpeg');
-//$a['Audiogram']['AudioPic'];
-	//echo "<img src=$image/>";
+  $this->Html->div('column');
+  echo $this->Html->image($a['Audiogram']['AudioPic']);
+  $this->Audiogram->Loss_hearing->id = a['AudiogramID'];
+ // if ($a[])
 }
 /**
 foreach ($audioprofiles as $a) {
