@@ -1,17 +1,17 @@
 php:
   build: .
-  dockerfile: ./audiogene_collection/Dockerfile
+  dockerfile: ./Dockerfile
   volumes:
-    - ./audiogene_collection:/var/www/html
+    - ./:/var/www/html
   links:
     - mysql
   ports:
-    - "3000"
+    - "3000:80"
 
 mysql:
   build: .
   volumes: 
-    - audiogene_collection/mysql/:/var/lib/mysql
-  dockerfile: ./audiogene_collection/mysql/Dockerfile
+    - mysql/:/var/lib/mysql
+  dockerfile: ./mysql/Dockerfile
   ports:
     - "3306"
