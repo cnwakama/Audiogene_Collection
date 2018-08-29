@@ -17,21 +17,26 @@
 
 #echo $this->Html->script('audioprofiles',false);
 
-#echo $this->Html->script('plot_audiogram',false);
+//echo $this->Html->script('plot_audiogram',false);
 
 //echo $this->Html->css('results');
 
-#print_r($audioprofiles[0]['Audioprofiles']);
+//print_r($audioprofiles[0]['Audioprofiles']);
 
-echo $this->Html->div('patients');
+	echo $this->Html->div('patients');
 //print_r($audiograms);
-echo $this->Html->image('/img/Audiograms/Audiogram_Mon_Aug_20_15:46:40_CDT_2018.jpeg');
-foreach ($audiograms as $a){
-  $this->Html->div('column');
-  echo $this->Html->image($a['Audiogram']['AudioPic']);
-  $this->Audiogram->Loss_hearing->id = a['AudiogramID'];
- // if ($a[])
-}
+	echo $this->Html->image('/img/Audiograms/Audiogram_Mon_Aug_20_15:46:40_CDT_2018.jpeg');
+	foreach ($audiograms as $a){
+  	$this->Html->div('column');
+  	echo $this->Html->image($a['Audiogram']['AudioPic']);
+  	$this->Audiogram->Loss_Hearing->id = a['AudiogramID'];
+ 		
+		if ($this->Audiogram->Loss_hearing->exist())
+		{
+			$this->Html->div('column');
+			echo "<table style="width:50%">";
+		}
+	}
 /**
 foreach ($audioprofiles as $a) {
 	
