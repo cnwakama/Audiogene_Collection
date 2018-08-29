@@ -745,3 +745,17 @@ pre {
 	display:none;
 }
 
+
+/** New **/
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.other::after {
+    content: "";
+    clear: both;
+    display: table;
+}

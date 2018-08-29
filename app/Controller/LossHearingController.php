@@ -5,7 +5,7 @@ Mult step form info:
 http://stackoverflow.com/questions/8507639/cakephp-what-is-the-best-way-to-ensure-flow-unidirectional-between-actions
 **/
 
-class AnalysesController extends AppController {
+class LossHearingController extends AppController {
     public $helpers = array('Html', 'Form');
     var $uses = array('Result','Analysis','Audioprofiles');
     
