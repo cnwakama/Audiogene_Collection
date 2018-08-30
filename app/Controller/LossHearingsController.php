@@ -13,19 +13,19 @@ class LossHearingsController extends AppController {
     
 		if($this->request->is('post')) {
 		
-			if(strcmp($this->data['Analysis']['input_type'],"S") == 0) {
+			if(strcmp($this->data['Loss_Hearing']['input_type'],"S") == 0) {
 				//Check if there is more than one lines
 				
-				$csvLines = explode("\n", $this->data['Analysis']['csv_data']);
+				$csvLines = explode("\n", $this->data['Loss_Hearing']['csv_data']);
 				
 				if( count( $csvLines ) > 1 ) {
-					if ($this->Analysis->save($this->data))
+					if ($this->Loss_Hearing->save($this->data))
 					{
 						
-						$saved_analysis = $this->Analysis->findById($this->Analysis->getInsertId());
+						//$saved_analysis = $this->Analysis->findById($this->Analysis->getInsertId());
 						
 						
-						$this->redirect(array('controller' => 'analyses', 'action' => 'results','run_id' => $saved_analysis['Analysis']['run_id']));
+						$this->redirect(array('controller' => 'analyses', 'action' => 'results','run_id' => $saved_analysis['Loss_Hearing']['run_id']));
 						//$this->redirect(array('controller' => 'analyses', 'action' => 'confirmAudiograms','run_id' => $saved_analysis['Analysis']['run_id']));
 						
 					}
@@ -34,16 +34,16 @@ class LossHearingsController extends AppController {
 			} else {
 				if (!empty($this->data))
 				{
-					if ($this->Analysis->save($this->data))
+					if ($this->Loss_Hearing->save($this->data))
 					{
 						$this->Session->setFlash('File upload successful.');
 						print_r($this->data);
 						
-						$saved_analysis = $this->Analysis->findById($this->Analysis->getInsertId());
+						$saved_analysis = $this->Loss_Hearing->findById($this->Loss_Hearing->getInsertId());
 						//print($saved_analysis['Analysis']['run_id']);
 						//$this->Session->write('Audiogene.analysis_step', '2');
 						//$this->Session->write('Audiogene.analysis_id', );
-						$this->redirect(array('controller' => 'analyses', 'action' => 'results','run_id' => $saved_analysis['Analysis']['run_id']));
+						$this->redirect(array('controller' => 'analyses', 'action' => 'results','run_id' => $saved_analysis['Loss_Hearing']['run_id']));
 						
 					}
 				}

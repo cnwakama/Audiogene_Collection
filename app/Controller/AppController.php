@@ -50,7 +50,7 @@ var $helpers = array('Form', 'Html', 'Session', 'Js', 'MenuBuilder.MenuBuilder')
 
             array(
                 'title' => 'Add/Modify Data',
-                'url' => array('controller' => 'Loss_Hearing', 'action' => 'index'),
+                'url' => array('controller' => 'Loss_Hearings', 'action' => 'index'),
             ),
 
             array(

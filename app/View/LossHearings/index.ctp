@@ -19,7 +19,7 @@ File type: Please download the template below and fill in your data. Please be s
 
 
 
-echo $this->Form->create('Analysis', array('enctype' => 'multipart/form-data'));
+echo $this->Form->create('LossHearings', array('enctype' => 'multipart/form-data'));
 
 echo '<div id="input-options"><label><b>How do you want to input your audiograms:</b></label>';
 
