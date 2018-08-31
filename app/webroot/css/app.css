@@ -32,11 +32,6 @@ body {
 	font-size:90%;
 	margin: 0;
 }
-a {
-	color: #003d4c;
-	text-decoration: underline;
-	font-weight: bold;
-}
 a:hover {
 	color: #367889;
 	text-decoration:none;
@@ -758,4 +753,9 @@ pre {
     content: "";
     clear: both;
     display: table;
+}
+
+ul#left-menu a {
+  color : white;
+  padding: 0 0 0 20px;
 }
