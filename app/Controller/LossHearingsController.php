@@ -7,9 +7,10 @@ http://stackoverflow.com/questions/8507639/cakephp-what-is-the-best-way-to-ensur
 
 class LossHearingsController extends AppController {
     public $helpers = array('Html', 'Form');
-    var $uses = array('Result','Analysis','Audioprofiles');
     
     public function index() {
+      $this->loadModel('Audiogram');
+
     
 		if($this->request->is('post')) {
 		

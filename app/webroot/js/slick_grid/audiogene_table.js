@@ -24,24 +24,26 @@ function integerValidation(value) {
 }
 
 var checkboxSelector = new Slick.CheckboxSelectColumn({
-	cssClass: "slick-cell-checkboxsel"
+	cssClass: "slick-cell-checkboxsel",
+            //headerCssClass: "hi"
 });
 
 var columns = [
 	checkboxSelector.getColumnDefinition(),
-	{id: "ID", name: "ID", field: "id", editor: TextCellEditor},
-	{id: "Age", name: "Age", field: "age", editor: TextCellEditor },
-	{id: "Ear", name: "Ear", field: "Ear", editor: SelectCellEditor},
+            //checkboxSelector.getColumnDefinition(),
+	{id: "ID", name: "PatientID", field: "id", editor: TextCellEditor, selectable: true},
+	//{id: "Age", name: "Age", field: "age", editor: TextCellEditor },
+	{id: "Ear", name: "AudiogramID", field: "Ear", editor: SelectCellEditor},
 	{id: "125hz", name: "125 Hz", field: "f125", editor: TextCellEditor, width: 70},
 	{id: "250hz", name: "250 Hz", field: "f250", editor: TextCellEditor, width: 70},
 	{id: "500hz", name: "500 Hz", field: "f500", editor: TextCellEditor, width: 70},
-	{id: "1000hz", name: "1K Hz", field: "f1K", editor: TextCellEditor, width: 70},
-	{id: "1500hz", name: "1.5K Hz", field: "f15K", editor: TextCellEditor, width: 74},
-	{id: "200hz", name: "2K Hz", field: "f2K", editor: TextCellEditor, width: 70},
-	{id: "3000hz", name: "3K Hz", field: "f3K", editor: TextCellEditor, width: 70},
-	{id: "4000hz", name: "4K Hz", field: "f4K", editor: TextCellEditor, width: 70},
-	{id: "6000hz", name: "6K Hz", field: "f6K", editor: TextCellEditor, width: 70},
-	{id: "8000hz", name: "8K Hz", field: "f8K", editor: TextCellEditor, width: 70}
+	{id: "1000hz", name: "1 kHz", field: "f1K", editor: TextCellEditor, width: 70},
+	{id: "1500hz", name: "1.5 kHz", field: "f15K", editor: TextCellEditor, width: 74},
+	{id: "200hz", name: "2 kHz", field: "f2K", editor: TextCellEditor, width: 70},
+	{id: "3000hz", name: "3 kHz", field: "f3K", editor: TextCellEditor, width: 70},
+	{id: "4000hz", name: "4 kHz", field: "f4K", editor: TextCellEditor, width: 70},
+	{id: "6000hz", name: "6 kHz", field: "f6K", editor: TextCellEditor, width: 70},
+	{id: "8000hz", name: "8 kHz", field: "f8K", editor: TextCellEditor, width: 70}
 
 ];
 
@@ -120,9 +122,9 @@ function createGrid() {
 			}
 
 
-		} else if (args.cell == 2) {
+		} //else if (args.cell == 2) {
 			/* Check if age is a number */
-			var cellValue = args.item[grid.getColumns()[args.cell].field];
+		/*	var cellValue = args.item[grid.getColumns()[args.cell].field];
 			var numericCellValue = cellValue.replace(/[^0-9\.]/g, '');
 			var convertedValue = parseFloat(numericCellValue);
 
@@ -137,7 +139,7 @@ function createGrid() {
 				grid.render();
 
 			}
-		}
+		}*/
 
 	});
 
@@ -202,24 +204,24 @@ function SelectCellEditor (args) {
 
 $(document).ready(function() {
 
-	$('#AnalysisIndexForm').submit(function() {
+	$('#LossHearingIndexForm').submit(function() {
 		grid.getEditorLock().commitCurrentEdit();
 		if ($("#edit-step").val() > 2)
 			return true;
 
-		if ($("[name='data[Analysis][input_type]']:checked").val() == "F") {
+		if ($("[name='data[LossHearing][input_type]']:checked").val() == "F") {
 			return true;
 		} else {
 			errorList = "";
 
-			if (!$("#AnalysisEmail").val()) {
-				$("#AnalysisEmail").addClass("error");
+			if (!$("#LossHearingEmail").val()) {
+				$("#LossHearingEmail").addClass("error");
 				alert("Please enter a valid Email Address.");
 				return false;
 			}
 
 			if (isGridValid()) {
-				$('#AnalysisCsvData').val(convertGridToCSV());
+				$('#LossHearingCsvData').val(convertGridToCSV());
 				return true;
 			} else {
 				alert("It appears that you have entered in multiple rows with the same ID, Age, and Ear.  Either change the ID, Age or Ear to make these rows unique.");
@@ -230,7 +232,7 @@ $(document).ready(function() {
 	});
 
 
-	if ($("[name='data[Analysis][input_type]']:checked").val() == "S") {
+	if ($("[name='data[LossHearing][input_type]']:checked").val() == "S") {
 		$("#spreadsheet-group").show();
 		$("#file-upload").hide();
 		if (opened == false) {
@@ -246,7 +248,7 @@ $(document).ready(function() {
 		var data = grid.getData();
 		data.push({
 			id: "",
-			age: "",
+		//	age: "",
 			Ear: "",
 			f125: "",
 			f250: "",
@@ -324,7 +326,7 @@ $(document).ready(function() {
 	$('#duplicate-row').attr('disabled', true);
 
 
-	$("[name='data[Analysis][input_type]']").click(function() {
+	$("[name='data[LossHearing][input_type]']").click(function() {
 		var value = $(this).attr("value")
 		if (value == "F") {
 			$("#spreadsheet-group").hide("slow");
@@ -355,9 +357,9 @@ function isGridValid() {
 		var age = data[i].age;
 		var ear = data[i].Ear;
 
-		if (id.length && age && ear.length) {
-			if (hash[id + "-" + age + "-" + ear] == undefined) {
-				hash[id + "-" + age + "-" + ear] = i;
+		if (id.length  && ear.length) {
+			if (hash[id + "-" + ear] == undefined) {
+				hash[id + "-" + ear] = i;
 
 			} else {
 				valid = false;
@@ -371,7 +373,7 @@ function isGridValid() {
 }
 
 function convertGridToCSV() {
-	var csv = "locus,gene name,mutation,ID,age,sex,Ear-LR,125 dB,250 dB,500 dB,1000 dB,1500 dB,2000 dB,3000 dB,4000 dB,6000 dB,8000 dB\n";
+	var csv = "ID,Ear-LR,125 dB,250 dB,500 dB,1000 dB,1500 dB,2000 dB,3000 dB,4000 dB,6000 dB,8000 dB\n";
 	var data = grid.getData();
 	for (var i = 0; i < data.length; i++) {
 		if (i > 0) csv += "\n";
@@ -381,19 +383,21 @@ function convertGridToCSV() {
 }
 
 function convertToCSVRow(row) {
-	var line = "null,null,unknown,";
+            var line;
+            //= "null,null,unknown,";
 
-	var lineId = row.id;
+	/*var lineId = row.id;
 
 	if (!isNaN(row.id[0])) {
 		lineId = "_" + lineId;
 	}
 
-	line += lineId.replace(",","__COMMA__") + ",";
+	line += lineId.replace(",","__COMMA__") + ",";*/
 
-	line += row.age + ",";
-	line += "M,";
-	line += row.Ear.substr(0, 1) + ",";
+	//line += row.age + ",";
+	//line += "M,";
+            line += row.id + ",";
+	line += row.Ear + ",";
 	line += row.f125 + ",";
 	line += row.f250 + ",";
 	line += row.f500 + ",";
@@ -413,8 +417,8 @@ function loadDemoData() {
 	for (var i = 0; i < 5; i++) {
 		data[i] = {
 			id: "Name " + i,
-			age: Math.round(Math.random() * 50),
-			Ear: (Math.random() <= .5 ? "Left": "Right"),
+			//age: Math.round(Math.random() * 50),
+                                    Ear: (Math.random() <= .5 ? "Left": "Right"),
 			f125: Math.round(Math.random() * 100),
 			f250: Math.round(Math.random() * 100),
 			f500: (Math.random() <= .75 ? Math.round(Math.random() * 100) : ""),
@@ -437,7 +441,7 @@ function loadDemoData() {
 
 function loadSpreadsheetData()
 {
-	var lines = $("#AnalysisCsvData").val().split("\n");
+	var lines = $("#LossHearingCsvData").val().split("\n");
 	var data = [];
 	for (var i = 1; i < lines.length; i++) {
 

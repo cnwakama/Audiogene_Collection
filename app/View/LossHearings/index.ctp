@@ -34,17 +34,17 @@ $scripts = array('slick_grid/slick.cellrangedecorator.js',
                                  'slick_grid/slick.checkboxselectcolumn.js',
                                  'slick_grid/audiogene_table.js',
                                  'slick_grid/slick.rowselectionmodel.js',
-                                 'audiogene.js');
+                                 /*'audiogene.js'*/);
 echo $this->Html->script($scripts,false);
 
 #Used for debugging
 echo $this->Html->script('konami',false);
 
-echo $this->Form->create('LossHearings', array('enctype' => 'multipart/form-data'));
+echo $this->Form->create('LossHearing', array('enctype' => 'multipart/form-data'));
 
 echo '<div id="input-options"><label><b>How do you want to input your audiograms:</b></label>';
 
-$radioAttributes = array( 'legend' => false, 'value' => 'F');
+$radioAttributes = array( 'legend' => false, 'value' => 'S');
 
 echo $this->Form->radio('input_type', array('F' => 'Upload File','S' => 'Spreadsheet'),$radioAttributes);
 
@@ -79,7 +79,7 @@ echo "</div>";
 
 <?php
 
-echo $this->Form->textarea('csv_data', array('rows' => '5', 'cols' => '5'));
+//echo $this->Form->textarea('csv_data', array('rows' => '5', 'cols' => '5'));
 
 echo $this->Form->input('filepath', array('type' => 'file','div' => array('id' => 'file-upload'), 'label' => 'Excel File'));
 

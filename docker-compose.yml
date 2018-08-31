@@ -14,4 +14,4 @@ mysql:
     - mysql/:/var/lib/mysql
   dockerfile: ./mysql/Dockerfile
   ports:
-    - "3306"
+    - "2000:3306"
