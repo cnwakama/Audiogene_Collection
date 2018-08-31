@@ -17,7 +17,28 @@ File type: Please download the template below and fill in your data. Please be s
 <br>
 <?php
 
+$this->Html->css(array('analysis','slick_grid/jquery-ui-1.8.5.custom','slick_grid/slick-default-theme.css','slick_grid/slick.grid'), null, array('inline' => false));
+echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',false);
+//echo $this->Html->script('scripts2',false);
 
+echo $this->Html->script('fix_ie_console',false);
+
+$scripts = array('slick_grid/slick.cellrangedecorator.js',
+                                 'slick_grid/slick.cellrangeselector.js',
+                                 'slick_grid/slick.cellselectionmodel.js',
+                                 'slick_grid/jquery.event.drag-2.0.min.js',
+                                 'slick_grid/slick.cellcopymanager.js',
+                                 'slick_grid/slick.core.js',
+                                 'slick_grid/slick.editors.js',
+                                 'slick_grid/slick.grid.js',
+                                 'slick_grid/slick.checkboxselectcolumn.js',
+                                 'slick_grid/audiogene_table.js',
+                                 'slick_grid/slick.rowselectionmodel.js',
+                                 'audiogene.js');
+echo $this->Html->script($scripts,false);
+
+#Used for debugging
+echo $this->Html->script('konami',false);
 
 echo $this->Form->create('LossHearings', array('enctype' => 'multipart/form-data'));
 

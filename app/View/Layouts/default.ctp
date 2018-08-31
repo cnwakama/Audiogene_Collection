@@ -26,7 +26,7 @@
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('app');
+		echo $this->Html->css('newApp');
 		//echo $this->Html->css('/usermgmt/css/umstyle');
 
 		echo $this->fetch('meta');

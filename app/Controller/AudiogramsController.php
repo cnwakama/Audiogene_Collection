@@ -8,7 +8,7 @@ class AudiogramsController extends AppController{
 
 	public function index(){
 		$this->set('audiograms', $this->Audiogram->find('all'));
-                        $this->set('frequencies', $this->Audiogram->Loss_Hearing->find('all'));
+                //$this->set('frequencies', $this->Audiogram->Loss_Hearing->find('all'));
 	}
 
 	/**
