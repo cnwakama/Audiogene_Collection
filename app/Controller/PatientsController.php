@@ -6,7 +6,7 @@ class PatientsController extends AppController{
 	
 
 	public function index(){
-		$this->set('audiograms', $this->Audiogram->find('all'));
+		$this->set('audiograms', $this->Patient->find('all'));
 	}
   /**
     * format json object and array of $paths to follow the schema of the Table Patient in the
@@ -31,60 +31,16 @@ class PatientsController extends AppController{
     {
       $a = array();
       $path = array();
-      for (int $i = 0; $i < count($json['files']); $i++)
+     /** for (int $i = 0; $i < count($json['files']); $i++)
       {
-        $binary =/**$newData['upload_file'];*/ base64_decode($json['file'][$i]]);
+        $binary = base64_decode($json['file'][$i]);
         $this->response->type('bitmap; charset=utf-8');
         array_push($path, WWW_ROOT . 'img/Audiograms/' . $json['names'][$i])
         $file = fopen($path[$i], 'wb');
         fwrite($file, $binary);
         fclose($file);
-      }
+      }*/
 
-      //producing IDs and checking if they are in the database
-      do
-      {
-        $randID = rand(100000, 999999);
-
-      }while ($this->Patient->Audiogram->hasAny(['AudiogramID' => $randID]));
-      $c = $randID;
-
-      do
-      {
-        $randID = rand(100000, 999999);
-
-      }while ($this->Patient->hasAny(['AudiogramID' => $randID]));
-      $y = $randID;
-
-      do
-      {
-        $randID = rand(100000, 999999);
-
-      }while ($this->Patient->Gender_information->hasAny(['AudiogramID' => $randID]));
-      $z = $randID;
-
-      do
-      {
-        $randID = rand(100000, 999999);
-
-      }while ($this->Patient->Family_member->hasAny(['AudiogramID' => $randID]));
-      $b = $randID;
-
-
-
-
-      for ($x = 0; $x < count($path); $x++)
-        {
-              array_push($a, array('AudiogramID' =>$x + $c, 'Age' => $json['Age'], 'AudioPic' => $path[$x]));
-        }
-      $new = array(
-        'Patient' => array('Gender' => $json['Gender'], 'Ethnicity' => $json['Ethnicity'], 'PatientID' => $c,
-		    'Audiogram' => $a, 
-        'Gender_information' => array(
-          array('FamilyID' => $y, 'Inheritance_Pattern' => $json['Inheritance_Pattern'], 'Genetic_Diagnosis' => $json['Genetic_Diagnosis'])),
-		    'Family_member' => array(
-          array('MemberID' => $z, 'Relationship' => $json['Relationship'])),)
-      );
       
       return $new;
     }
@@ -98,10 +54,15 @@ class PatientsController extends AppController{
 	 * Date_of_Collection, PatientID, AudiogramID, MethodID, FamilyID, FrequencyID
 	 */  
   public function insert(){
+	$this->set('newData', 'hi');
     if ($this->request->is('post'))
     {
+	$this->render('/Patients/insert');
+	 return $this->redirect(array('controller' => 'patients', 'action' => 'insert'));
       $data = json_decode($this->request->data['object'], true);
-      $formattedData = $this->formatter($data);
+			$this->set('newData', count($data['files']));
+			return $this->redirect(array('controller' => 'patients', 'action' => 'insert'));
+     // $formattedData = $this->formatter($data);
 
       if ($this->Patient->saveAll($newData, array('deep' => true)))
       {
@@ -112,89 +73,8 @@ class PatientsController extends AppController{
         $this->Session->setFlash('Error.');
       }
       $this->render('/Patients/insert');
+
+		//	return $this->redirect(array('controller' => 'patients', 'action' => 'insert'));
     }
-	  /**          $path = array('/path/');
-			$this->set('newData', '');
-		// Get JSON encoded data submitted to a PUT/POST action
-		if ($this->request->is('post')){
-			$data = json_decode($this->request->data['object'], true);
-                                    $newData = $this->formatter($data, $path);
-                                    //$this->set('newData', $newData);
-					//SaveAll
-			if ($this->Patient->saveAssociated($newData, array('deep' => true))){
-                                        $this->Session->setFlash('The Post has been saved');
-                                }
-                            	else{
-                                        $this->Session->setFlash('Error.');
-                                }
-			//debug($this->Audiogram->validationErrors);
-			$this->render('/Patients/insert');
-			return $this->redirect(array('controller' => 'patients', 'action' => 'insert'));
-			if ($this->request->accepts('json')){
-				$data = $this->request->input('json_decode', true);
-				$data['Audiogram']['AudioPic'] = $path;
-				unset($this->Audiogram->validate['AudioPic']);
-				//$this->Recipe->create();
-				if ($this->Audiogram->saveAssociated($dataInfo)){
-					$this->Session->setFlash('The Post has been saved');
-				}
-				else{
-					$this->Session->setFlash('Error.');
-				}
-				$info = TRUE;
-			}
-			else{
-                        	$binary =$newData['upload_file']; //base64_decode($newData['upload_file']);
-                        	$this->response->type('bitmap; charset=utf-8');
-                        	$file = fopen(WWW_ROOT . 'img/Audiograms/' . $newData['name'], 'wb');
-                        	fwrite($file, $binary);
-                        	fclose($file);
-
-				//$newData = $this->request->data;
-				$this->set('newData', $newData);
-		//if ($this->request->accepts('file')){
-				//if (!empty($this->data) && is_uploaded_file($this->data['Audiogram']['file']['tmp_name'])){
-					$this->render('/Audiograms/insert');
-					$file = $newData['uploaded_file'];
-				//	return $this->redirect(array('controller' => 'audiograms', 'action' => 'insert'));
-					//$fileOk = $this->uploadFiles('img/Audiograms', $newData['file'], $newData['name']);
-					move_uploaded_file($file['tmp_name'], WWW_ROOT . 'img/Audiograms/' . $file['filename']);
-					$this->Session->setFlash('The Image has been stored');
-					// will return
-					//Array
-					//(
-					//	[urls] => Array
-					//		(
-					//			[0] => img/files/15_zamri.jpg
-					//		)
-					//
-					//)	
-					if (array_key_exists('url', $fileOk)) {
-						// save the url in the form data
-						$path = $fileOk['urls'][0];
-						$picture = TRUE;
-					}
-				//$this->render('/Audiograms/insert');
-
-			//}
-		
-		}
-		//$picture = TRUE;
-		$this->set('picture', $picture);
-		$this->set('info', $info);
-		$this->render('/Audiograms/insert');
-		// $this->response->header('Location', '/Audiograms/insert');
-        //return $this->response;
-		return $this->redirect($this->referer());
-		//return $this->redirect(array('controller' => 'audiograms', 'action' => 'insert'));
-
-
-
-	}
-	//$picture = TRUE;
-	//$this->render();
-  //              $this->set('picture', $picture);
-
-	//return $this->redirect(array('controller' => 'audiograms', 'action' => 'insert'));*/
 }
 }

@@ -24,7 +24,7 @@ COPY ./apache/site.conf /etc/apache2/sites-available/000-default.conf
 COPY . .
 
 # Set default working directory
-WORKDIR ./audiogene_collection
+WORKDIR ./
 
 # Create tmp directory and make it writable by the web server
 #RUN mkdir -p \
