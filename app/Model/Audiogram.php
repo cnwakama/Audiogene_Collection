@@ -16,7 +16,7 @@ class Audiogram extends AppModel{
 
 	public $hasMany = array(
 		'Loss_Hearing' => array(
-			'className' => 'Loss_hearing',
+			'className' => 'Loss_Hearing',
 			'foreignKey' => 'AudiogramID',
 		)
 	);

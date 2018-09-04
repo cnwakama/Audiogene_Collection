@@ -204,24 +204,24 @@ function SelectCellEditor (args) {
 
 $(document).ready(function() {
 
-	$('#LossHearingIndexForm').submit(function() {
+	$('#AudiogramIndexForm').submit(function() {
 		grid.getEditorLock().commitCurrentEdit();
 		if ($("#edit-step").val() > 2)
 			return true;
 
-		if ($("[name='data[LossHearing][input_type]']:checked").val() == "F") {
+		if ($("[name='data[Audiogram][input_type]']:checked").val() == "F") {
 			return true;
 		} else {
 			errorList = "";
 
-			if (!$("#LossHearingEmail").val()) {
-				$("#LossHearingEmail").addClass("error");
+			if (!$("#AudiogramEmail").val()) {
+				$("#AudiogramEmail").addClass("error");
 				alert("Please enter a valid Email Address.");
 				return false;
 			}
 
 			if (isGridValid()) {
-				$('#LossHearingCsvData').val(convertGridToCSV());
+				$('#AudiogramCsvData').val(convertGridToCSV());
 				return true;
 			} else {
 				alert("It appears that you have entered in multiple rows with the same ID, Age, and Ear.  Either change the ID, Age or Ear to make these rows unique.");
@@ -232,7 +232,7 @@ $(document).ready(function() {
 	});
 
 
-	if ($("[name='data[LossHearing][input_type]']:checked").val() == "S") {
+	if ($("[name='data[Audiogram][input_type]']:checked").val() == "S") {
 		$("#spreadsheet-group").show();
 		$("#file-upload").hide();
 		if (opened == false) {
@@ -326,7 +326,7 @@ $(document).ready(function() {
 	$('#duplicate-row').attr('disabled', true);
 
 
-	$("[name='data[LossHearing][input_type]']").click(function() {
+	$("[name='data[Audiogram][input_type]']").click(function() {
 		var value = $(this).attr("value")
 		if (value == "F") {
 			$("#spreadsheet-group").hide("slow");
@@ -441,7 +441,7 @@ function loadDemoData() {
 
 function loadSpreadsheetData()
 {
-	var lines = $("#LossHearingCsvData").val().split("\n");
+	var lines = $("#AudiogramCsvData").val().split("\n");
 	var data = [];
 	for (var i = 1; i < lines.length; i++) {
 

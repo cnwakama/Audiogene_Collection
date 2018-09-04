@@ -9,9 +9,6 @@ class LossHearingsController extends AppController {
     public $helpers = array('Html', 'Form');
     
     public function index() {
-      $this->loadModel('Audiogram');
-
-    
 		if($this->request->is('post')) {
 		
 			if(strcmp($this->data['Loss_Hearing']['input_type'],"S") == 0) {
