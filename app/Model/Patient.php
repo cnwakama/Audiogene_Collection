@@ -10,17 +10,17 @@ class Patient extends AppModel{
 	            'className' => 'Family_member',
 			'foreignKey' => 'PatientID',
 		),
-	/**'Gender_information' => array(
+	'Gender_information' => array(
                                     'className' => 'Gender_information',
                                        'foreignKey' => 'PatientID',)
-        */);
+        );
 
-        public $hasOne = array(
-            'Gender_Information' => array(
+        /*public $hasOne = array(
+            'Gender_information' => array(
                                     'className' => 'Gender_Information',
 					'foreignKey' => 'PatientID',
-                        )
-        );
+                        )*/
+       // );
       //  public $belongsTo = array(
         //        'Patient' => array(
           //              'className' => 'Patient',

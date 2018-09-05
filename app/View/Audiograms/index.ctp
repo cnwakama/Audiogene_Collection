@@ -13,9 +13,9 @@ echo $this->Html->image('/img/Audiograms/Audiogram_Mon_Aug_20_15:46:40_CDT_2018.
   <?php
 	//$patientA= 1;
 	 //$patientA = $this->Audiogram->find('all', array('Patient.PatientID' => $a['Audiogram']['PatientID']));
-	//print_r($a);
-    $this->Html->div('patient');
-    $this->Html->div('column', "Patient:" + $a['Audiogram']['AudiogramID']);
+	print_r($a);
+    echo $this->Html->div('patient');
+    echo $this->Html->div('column', "Patient: " .  $a['Audiogram']['AudiogramID']);
     echo $this->Html->image($a['Audiogram']['AudioPic']);
   ?>
 
@@ -38,8 +38,8 @@ echo $this->Html->image('/img/Audiograms/Audiogram_Mon_Aug_20_15:46:40_CDT_2018.
     <fieldset>
       <legend>Other Information</legend>
         Age: <?php echo $a['Audiogram']['Age'] ?><br>
-        Genetic Diagnosis: <?php echo $a['Patient']['Gender_Information']['Genetic_Diagnosis'] ?><br>
-        Inheritance Pattern: <?php echo $a['Patient']['Gender_Information']['Inheritance_Pattern'] ?><br>
+        Genetic Diagnosis: <?php echo $a['Patient']['Gender_information'][0]['Genetic_Diagnosis'] ?><br>
+        Inheritance Pattern: <?php echo $a['Patient']['Gender_information'][0]['Inheritance_Pattern'] ?><br>
         Gender: <?php echo $a['Patient']['Gender'] ?><br>
         Ethnicity: <?php echo $a['Patient']['Ethnicity'] ?><br>
     </fieldset>

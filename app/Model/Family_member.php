@@ -7,7 +7,7 @@ class Family_member extends AppModel {
 			'foreignKey' => 'PatientID',
 		),
 		'Gender_information' => array(
-			'className' => 'Gender_information',
+			'className' => 'Gender_Information',
 			'foreignKey' => 'FamilyID',
 		)
 	);	
