@@ -25,7 +25,10 @@ class AudiogramsController extends AppController{
 
                                 $csvLines = explode("\n", $this->data['Audiogram']['csv_data']);
 
-                                if( count( $csvLines ) > 1 ) {
+                                if( count( $csvLines ) > 1 ) 
+                                    {
+                                    print_r($this->data);
+                                    $this->redirect(array('controller' => 'audiograms', 'action' => 'add')); 
                                         if ($this->Audiogram->Loss_Hearing->save($this->data))
                                         {
 						$this->flash->set('Frequency Values have been loaded');
