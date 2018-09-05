@@ -28,21 +28,67 @@ class PatientsController extends AppController{
     *    );
   **/
   private function formatter($json)
-    {
+   {
       $a = array();
       $path = array();
-     /** for (int $i = 0; $i < count($json['files']); $i++)
+      for ($i = 0; $i < count($json['files']); $i++)
       {
-        $binary = base64_decode($json['file'][$i]);
+        $binary = base64_decode($json['files'][$i]);
         $this->response->type('bitmap; charset=utf-8');
-        array_push($path, WWW_ROOT . 'img/Audiograms/' . $json['names'][$i])
-        $file = fopen($path[$i], 'wb');
+        array_push($path, 'img/Audiograms/' . $json['names'][$i]);
+        $file = fopen(WWW_ROOT .$path[$i], 'wb');
         fwrite($file, $binary);
         fclose($file);
-      }*/
+      }
+			//return $a;
 
+	//producing IDs and checking if they are in the database
+
+      do
+      { 
+        $randID = rand(100000, 999999);
       
-      return $new;
+      }while ($this->Patient->Audiogram->hasAny(['AudiogramID BETWEEN ? AND ?' => array($randID - 1, $randID + count($json['files']))]));
+      $c = $randID;
+
+      do
+      { 
+        $randID = rand(100000, 999999);
+      
+      }while ($this->Patient->hasAny(['PatientID' => $randID]));
+      $y = $randID;
+
+      do
+      {
+        $randID = rand(100000, 999999);
+
+      }while ($this->Patient->Gender_Information->hasAny(['FamilyID' => $randID]));
+      $z = $randID;
+
+      do
+      {
+        $randID = rand(100000, 999999);
+
+      }while ($this->Patient->Family_member->hasAny(['MemberID' => $randID]));
+      $b = $randID;
+
+      for ($x = 0; $x < count($path); $x++)
+        {
+		/*while ($this->Patient->Audiogram->hasAny(['AudiogramID' => ($c + $x]))
+		{
+			$c++;
+		}*/
+              array_push($a, array('AudiogramID' =>$x + $c, 'Age' => $json['Age'], 'AudioPic' => $path[$x]));
+        }
+      $new = array(
+        'Patient' => array('Gender' => $json['Gender'], 'Ethnicity' => $json['Ethnicity'], 'PatientID' => $y,
+        'Audiogram' => $a,
+        'Gender_Information' => array(
+          array('FamilyID' => $z, 'Inheritance_Pattern' => $json['Inheritance_Pattern'], 'Genetic_Diagnosis' => $json['Genetic_Diagnosis'])),
+        'Family_member' => array(
+          array('MemberID' => $b, 'Relationship' => $json['Relationship'])),)
+      );
+ 	return $new;
     }
 
   
@@ -55,16 +101,19 @@ class PatientsController extends AppController{
 	 */  
   public function insert(){
 	$this->set('newData', 'hi');
+	$formattedData = '';
     if ($this->request->is('post'))
     {
-	$this->render('/Patients/insert');
-	 return $this->redirect(array('controller' => 'patients', 'action' => 'insert'));
-      $data = json_decode($this->request->data['object'], true);
-			$this->set('newData', count($data['files']));
-			return $this->redirect(array('controller' => 'patients', 'action' => 'insert'));
-     // $formattedData = $this->formatter($data);
+	
+	//$this->render('/Patients/insert');
+	// return $this->redirect(array('controller' => 'patients', 'action' => 'insert'));
+  		$json = json_decode($this->request->data['object'], true);
+      $formattedData = $this->formatter($json);
+			$this->set('newData', $formattedData);
+      $this->render('/Patients/insert');
+	return $this->redirect(array('controller' => 'patients', 'action' => 'insert'));
 
-      if ($this->Patient->saveAll($newData, array('deep' => true)))
+      if ($this->Patient->saveAll($formattedData, array('deep' => true)))
       {
         $this->Session->setFlash('The Post has been saved');
       }
@@ -74,7 +123,7 @@ class PatientsController extends AppController{
       }
       $this->render('/Patients/insert');
 
-		//	return $this->redirect(array('controller' => 'patients', 'action' => 'insert'));
+	return $this->redirect(array('controller' => 'patients', 'action' => 'insert'));
     }
 }
 }

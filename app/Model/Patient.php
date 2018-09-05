@@ -16,8 +16,8 @@ class Patient extends AppModel{
         */);
 
         public $hasOne = array(
-            'Gender_information' => array(
-                                    'className' => 'Gender_information',
+            'Gender_Information' => array(
+                                    'className' => 'Gender_Information',
 					'foreignKey' => 'PatientID',
                         )
         );

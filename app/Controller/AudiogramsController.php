@@ -3,12 +3,21 @@ class AudiogramsController extends AppController{
 	public $helpers = array('Html', 'Form');
 	
 	public function index(){
-		$this->loadModel('Loss_Hearing');
+		//$this->loadModel('Loss_Hearing');
+		$this->Audiogram->bindModel([
+                        'belongsTo' => [
+                                'Patient' => [
+                                        'foreignKey' => 'PatientID',
+                                        'joinType' => 'INNER'
+                                ]
+                        ]
+                ]);
+		 $this->Audiogram->recursive = 2;
 		$this->set('audiograms', $this->Audiogram->find('all'));
 	}
 
 	 public function add() {
-		$this->set('audiograms', $this->Audiogram->find('all', array('contain !=' => array('Loss_Hearing'))));
+		$this->set('audiograms', $this->Audiogram->find('all', array('contain' => 'Patient')));
                 if($this->request->is('post')) {
 
                         if(strcmp($this->data['Audiogram']['input_type'],"S") == 0) {

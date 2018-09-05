@@ -1,6 +1,7 @@
 <?php
-class Gender_information extends AppModel{
-	public $primaryKey = 'FamilyID';     
+class Gender_Information extends AppModel{
+	public $primaryKey = 'FamilyID';
+	public $useTable = 'gender_informations';     
         public $belongTo = array(
 		'Patient' => array(
                 	'className' => 'Patient',
