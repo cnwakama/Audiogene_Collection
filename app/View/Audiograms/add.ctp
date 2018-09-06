@@ -21,13 +21,13 @@ $scripts = array('slick_grid/slick.cellrangedecorator.js',
 				 'slick_grid/slick.checkboxselectcolumn.js',
 				 'slick_grid/audiogene_table.js',
 				 'slick_grid/slick.rowselectionmodel.js',
-				 'audiogene.js');
+				/* 'audiogene.js'*/);
 
 echo $this->Html->script($scripts,false);
 
 
 #Used for debugging
-echo $this->Html->script('konami',false);
+//echo $this->Html->script('konami',false);
 
 ?>
 
@@ -49,9 +49,10 @@ File type: Please download the template below and fill in your data. Please be s
 
 echo $this->Form->create('Audiogram', array('enctype' => 'multipart/form-data'));
 
-echo '<div id="input-options"><label><b>How do you want to input your audiograms:</b></label>';
+echo '<div id="input-options" width=50%><label><b>Do you want to edit or add Hearing Loss data:</b></label>';
 
-$radioAttributes = array( 'legend' => false, 'value' => 'F');
+echo $form->input('Audiogram.AudiogramID',array('type'=>'select','options'=>$audiograms));
+$radioAttributes = array( 'legend' => false, 'value' => 'S');
 
 echo $this->Form->radio('input_type', array('F' => 'Upload File','S' => 'Spreadsheet'),$radioAttributes);
 
