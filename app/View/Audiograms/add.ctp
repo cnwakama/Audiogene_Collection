@@ -40,7 +40,7 @@ echo $this->Html->script($scripts,false);
 #Used for debugging
 echo $this->Html->script('konami',false);
 
-echo $this->Form->create('LossHearing', array('enctype' => 'multipart/form-data'));
+echo $this->Form->create('Audiogram', array('enctype' => 'multipart/form-data'));
 
 echo '<div id="input-options"><label><b>How do you want to input your audiograms:</b></label>';
 
