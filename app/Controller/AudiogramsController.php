@@ -18,7 +18,8 @@ class AudiogramsController extends AppController{
 
 	 public function add() {
 		//$this->set('csv', 'hello');
-		$this->set('audiograms', $this->Audiogram->find('all', array('contain' => 'Patient')));
+		
+		$this->set('audiograms', $this->Audiogram->find('list', array('contain' => 'Patient')));
                 if($this->request->is('post')) {
 			$csvLines = explode("\n", $this->data['Audiogram']['csv_data']);
                                 $this->Session->setFlash(implode(" ",$this->data));

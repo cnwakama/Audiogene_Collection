@@ -20,6 +20,7 @@
 
 //setLocale(LC_ALL, 'deu');
 //Configure::write('Config.language', 'deu');
+ Configure::write('Asset.timestamp', 'force');
 
 /**
  * CakePHP Debug Level:

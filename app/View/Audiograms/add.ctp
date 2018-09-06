@@ -32,16 +32,12 @@ echo $this->Html->script($scripts,false);
 ?>
 
 
-<h2>AudioGene Analysis v4.0</h2>
 
 <div id="top-header"><font size="5">Upload Audiogram</font></div>
 
 <div id="instructions">
 File type: Please download the template below and fill in your data. Please be sure to save the file as a 2003 Excel spreadsheet with the xls extension, and not as a 2008 Excel file format with the xlsx extension. The patient data goes on the first sheet and the audiograms for the patients are placed on the second sheet.
 </div>
-<br>
-<a href="/pages/audiogene_template">template.xls</a>
-<br>
 <br>
 <?php
 
@@ -51,7 +47,8 @@ echo $this->Form->create('Audiogram', array('enctype' => 'multipart/form-data'))
 
 echo '<div id="input-options" width=50%><label><b>Do you want to edit or add Hearing Loss data:</b></label>';
 
-echo $form->input('Audiogram.AudiogramID',array('type'=>'select','options'=>$audiograms));
+echo $this->Form->input('Patient',array('empty' => 'Choose a Patient', 'type'=>'select','options'=>$audiograms));
+echo $this->Form->input('Patient\'s Audiogram',array('empty' => 'Choose an Audiogram', 'type'=>'select','options'=>array()));
 $radioAttributes = array( 'legend' => false, 'value' => 'S');
 
 echo $this->Form->radio('input_type', array('F' => 'Upload File','S' => 'Spreadsheet'),$radioAttributes);
