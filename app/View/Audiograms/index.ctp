@@ -5,7 +5,7 @@
 <?php echo $this->Html->div('patients');
 //print_r($audiograms);
 //$query = $this->Users->find()->contain('Cities');
-echo $this->Html->image('/img/Audiograms/Audiogram_Mon_Aug_20_15:46:40_CDT_2018.jpeg');
+//echo $this->Html->image('/img/Audiograms/Audiogram_Mon_Aug_20_15:46:40_CDT_2018.jpeg');
 //print_r($audiograms);
 ?>
 
@@ -13,7 +13,7 @@ echo $this->Html->image('/img/Audiograms/Audiogram_Mon_Aug_20_15:46:40_CDT_2018.
   <?php
 	//$patientA= 1;
 	 //$patientA = $this->Audiogram->find('all', array('Patient.PatientID' => $a['Audiogram']['PatientID']));
-	print_r($a);
+	//print_r($a);
     echo $this->Html->div('patient');
     echo $this->Html->div('column', "Patient: " .  $a['Audiogram']['AudiogramID']);
     echo $this->Html->image($a['Audiogram']['AudioPic']);
