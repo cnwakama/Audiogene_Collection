@@ -17,17 +17,29 @@ class AudiogramsController extends AppController{
 	}
 
 	 public function add() {
+		//$this->set('csv', 'hello');
 		$this->set('audiograms', $this->Audiogram->find('all', array('contain' => 'Patient')));
                 if($this->request->is('post')) {
-
+			$csvLines = explode("\n", $this->data['Audiogram']['csv_data']);
+                                $this->Session->setFlash(implode(" ",$this->data));
+				//$this->set('csv', 'hello');
+                                //$this->set('csv', $csvLines);
+                                //$this->render('/Audiograms/add');
+                                //$this->redirect(array('controller' => 'audiograms', 'action' => 'add'));
+				//if ($this->Audiogram->Loss_Hearing->save($this->data)){
+				//}
                         if(strcmp($this->data['Audiogram']['input_type'],"S") == 0) {
                                 //Check if there is more than one lines
 
                                 $csvLines = explode("\n", $this->data['Audiogram']['csv_data']);
-
+				//$this->Flash->set($csvLines);
+				//$this->set('csv', $csvLines);
+				//$this->render('/Audiograms/add');
+				$this->redirect(array('controller' => 'audiograms', 'action' => 'add')); 
+				//$this->render('/Patients/insert');
                                 if( count( $csvLines ) > 1 ) 
                                     {
-                                    print_r($this->data);
+                                    //print_r($this->data);
                                     $this->redirect(array('controller' => 'audiograms', 'action' => 'add')); 
                                         if ($this->Audiogram->Loss_Hearing->save($this->data))
                                         {

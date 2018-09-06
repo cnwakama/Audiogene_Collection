@@ -1,38 +1,10 @@
 
 <?php
-//echo  $csv;
-
-//Add scripts and css for spreadsheet
-$this->Html->css(array('add','slick_grid/jquery-ui-1.8.5.custom','slick_grid/slick-default-theme.css','slick_grid/slick.grid'), null, array('inline' => false));
-
-echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',false);
-//echo $this->Html->script('scripts2',false);
-
-echo $this->Html->script('fix_ie_console',false);
-
-$scripts = array('slick_grid/slick.cellrangedecorator.js',
-				 'slick_grid/slick.cellrangeselector.js',
-				 'slick_grid/slick.cellselectionmodel.js',
-				 'slick_grid/jquery.event.drag-2.0.min.js',
-				 'slick_grid/slick.cellcopymanager.js',
-				 'slick_grid/slick.core.js',
-				 'slick_grid/slick.editors.js',
-				 'slick_grid/slick.grid.js',
-				 'slick_grid/slick.checkboxselectcolumn.js',
-				 'slick_grid/audiogene_table.js',
-				 'slick_grid/slick.rowselectionmodel.js',
-				 'audiogene.js');
-
-echo $this->Html->script($scripts,false);
-
-
-#Used for debugging
-echo $this->Html->script('konami',false);
 
 ?>
 
 
-<h2>AudioGene Analysis v4.0</h2>
+<h2>Adding Hearing Loss Data</h2>
 
 <div id="top-header"><font size="5">Upload Audiogram</font></div>
 
@@ -45,13 +17,34 @@ File type: Please download the template below and fill in your data. Please be s
 <br>
 <?php
 
+$this->Html->css(array('analysis','slick_grid/jquery-ui-1.8.5.custom','slick_grid/slick-default-theme.css','slick_grid/slick.grid'), null, array('inline' => false));
+echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',false);
+//echo $this->Html->script('scripts2',false);
 
+echo $this->Html->script('fix_ie_console',false);
+
+$scripts = array('slick_grid/slick.cellrangedecorator.js',
+                                 'slick_grid/slick.cellrangeselector.js',
+                                 'slick_grid/slick.cellselectionmodel.js',
+                                 'slick_grid/jquery.event.drag-2.0.min.js',
+                                 'slick_grid/slick.cellcopymanager.js',
+                                 'slick_grid/slick.core.js',
+                                 'slick_grid/slick.editors.js',
+                                 'slick_grid/slick.grid.js',
+                                 'slick_grid/slick.checkboxselectcolumn.js',
+                                 'slick_grid/audiogene_table.js',
+                                 'slick_grid/slick.rowselectionmodel.js',
+                                 'audiogene.js');
+echo $this->Html->script($scripts,false);
+
+#Used for debugging
+echo $this->Html->script('konami',false);
 
 echo $this->Form->create('Audiogram', array('enctype' => 'multipart/form-data'));
 
 echo '<div id="input-options"><label><b>How do you want to input your audiograms:</b></label>';
 
-$radioAttributes = array( 'legend' => false, 'value' => 'F');
+$radioAttributes = array( 'legend' => false, 'value' => 'S');
 
 echo $this->Form->radio('input_type', array('F' => 'Upload File','S' => 'Spreadsheet'),$radioAttributes);
 
@@ -79,7 +72,6 @@ echo "</div>";
  <button type="button" id="duplicate-row" disabled="">Duplicate Row</button>
  <button type="button" id="load-demo-data">Load Demo Data</button>
 </div>
-
 </fieldset>
 
 
@@ -88,29 +80,27 @@ echo "</div>";
 
 echo $this->Form->textarea('csv_data', array('rows' => '5', 'cols' => '5'));
 
-//echo $this->Form->input('filepath', array('type' => 'file','div' => array('id' => 'file-upload'), 'label' => 'Excel File'));
+echo $this->Form->input('filepath', array('type' => 'file','div' => array('id' => 'file-upload'), 'label' => 'Excel File'));
 
 echo '<div id="experimental" style="display: none">';
 
-//echo '<br><div id="input-family"><label><b>Are the individuals singletons or from the same family:</b></label></div>';
+echo '<br><div id="input-family"><label><b>Are the individuals singletons or from the same family:</b></label></div>';
 
-//$familyRadioAttributes = array( 'legend' => false, 'value' => 'S');
+$familyRadioAttributes = array( 'legend' => false, 'value' => 'S');
 
-//echo $this->Form->radio('input_family', array('S' => 'Singletons','F' => 'Same Family'),$familyRadioAttributes);
+echo $this->Form->radio('input_family', array('S' => 'Singletons','F' => 'Same Family'),$familyRadioAttributes);
 echo '<br><br>';
 
 
-//echo '<br><div id="input-inheritance"><label><b>What is the believed inheritance pattern:</b></label></div>';
+echo '<br><div id="input-inheritance"><label><b>What is the believed inheritance pattern:</b></label></div>';
 
-//$inheritanceRadioAttributes = array( 'legend' => false, 'value' => 'D');
+$inheritanceRadioAttributes = array( 'legend' => false, 'value' => 'D');
 
-//echo $this->Form->radio('input_inheritance', array('D' => 'Dominant','R' => 'Recessive', 'U' => 'Unknown'),$inheritanceRadioAttributes);
+echo $this->Form->radio('input_inheritance', array('D' => 'Dominant','R' => 'Recessive', 'U' => 'Unknown'),$inheritanceRadioAttributes);
 echo '<br><br>';
-
-//echo '</div>'; 
 
 echo '</div>'; 
-
+//echo '</div>'; 
 echo $this->Form->input('email');
 
 echo $this->Form->end('Next Step'); //outputs stray

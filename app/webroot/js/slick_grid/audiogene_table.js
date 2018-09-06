@@ -204,8 +204,9 @@ function SelectCellEditor (args) {
 
 $(document).ready(function() {
 
-	$('#AudiogramIndexForm').submit(function() {
+	$('#AudiogramAddForm').submit(function() {
 		grid.getEditorLock().commitCurrentEdit();
+		alert("Here");
 		if ($("#edit-step").val() > 2)
 			return true;
 
@@ -222,6 +223,7 @@ $(document).ready(function() {
 
 			if (isGridValid()) {
 				$('#AudiogramCsvData').val(convertGridToCSV());
+				alert("Here");
 				return true;
 			} else {
 				alert("It appears that you have entered in multiple rows with the same ID, Age, and Ear.  Either change the ID, Age or Ear to make these rows unique.");

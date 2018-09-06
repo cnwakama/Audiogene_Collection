@@ -13,11 +13,11 @@
   <?php
 	//$patientA= 1;
 	 //$patientA = $this->Audiogram->find('all', array('Patient.PatientID' => $a['Audiogram']['PatientID']));
-<<<<<<< HEAD
+/*<<<<<<< HEAD
 	//print_r($a);
 =======
 //	print_r($a);
->>>>>>> 46781edfd2a74c6fc122e8b935e719c362523a3e
+>>>>>>> 46781edfd2a74c6fc122e8b935e719c362523a3e*/
     echo $this->Html->div('patient');
     echo $this->Html->div('column', "Patient: " .  $a['Audiogram']['AudiogramID']);
     echo $this->Html->image($a['Audiogram']['AudioPic']);

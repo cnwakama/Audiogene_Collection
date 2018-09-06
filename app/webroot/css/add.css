@@ -1,0 +1,51 @@
+/*
+#loci_selection {
+    width: 4px;
+}
+
+*/
+
+#file-upload{
+	margin-top: 1em;
+}
+
+#top-header {
+	font: normal 0.9em/140% georgia, "times new roman", times, serif;
+	margin-bottom: 1em;
+}
+
+/*#AnalysisEmail {
+	width: 500px;
+}*/
+
+form > div.input {
+	clear: none;
+	margin-bottom: 1em;
+	padding: 0em;
+	vertical-align: baseline;
+}
+
+#myGrid {
+	background: white;
+	outline: 0;
+	border: 1px solid gray;
+}
+
+#gridButtons {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+fieldset#spreadsheet-group {
+border: 1px solid #CCC;
+margin: 20px 0;
+padding: 10px;
+}
+
+#AudiogramCsvData {
+	display: none;
+}
+
+#spreadsheet-group {
+	display: none;
+}
