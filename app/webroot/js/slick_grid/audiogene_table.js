@@ -203,14 +203,53 @@ function SelectCellEditor (args) {
 }
 
 $(document).ready(function() {
+	/*$('#AudiogramAddForm').click(function() {
+		var btn = ($('#AudiogramPatient').val() == '');
+		if (btn){
+              		$("#AudiogramPatient").addClass("error");
+              		alert("Please select a Patient.");
+              		return false;
+            	}
+              	alert($('#AudiogramPatient').val());
+	});*/
+	//#AudiogramAddForm
+	$('#ButtonAddForm').submit(function() {
+		if (!$("#ButtonPatient").val()) {
+                                $("#ButtonPatient").addClass("error");
+                                alert("Please enter a valid PatientID.");
+                                return false;
+                }
 
+		else {
+			alert("hi");
+		}
+	});
 	$('#AudiogramAddForm').submit(function() {
 		grid.getEditorLock().commitCurrentEdit();
-		alert("Here");
-		if ($("#edit-step").val() > 2)
-			return true;
-
-		if ($("[name='data[Audiogram][input_type]']:checked").val() == "F") {
+		//ev.preventDefault();
+		if ($(this).attr("value")=="View Audiogram"){
+			alert("hi");
+		}
+		alert($(this).attr('id'));
+		//alert("hi");
+		//var val = (document.selectionForm.AudiogramAddForm.value == "View Audiogram");
+		//var val = $('Pic').find("input[type=submit][clicked=true]");
+		//var btn = ($('#AudiogramPatient').val() == '');
+		//alert(val);
+		//alert($('#AudiogramPatient').val() == '');
+		/*if ($("#edit-step").val() > 2)
+			return true;*/
+		/*if (isset($("#Pic"))){
+			if (btn){
+				$("#AudiogramPatient").addClass("error");
+                                alert("Please select a Patient.");
+                                return false;
+			}
+			alert($('#AudiogramPatient').val());
+			//return true;
+		}
+		else*/ if ($("[name='data[Audiogram][input_type]']:checked").val() == "F") {
+			alert("hi");
 			return true;
 		} else {
 			errorList = "";
@@ -223,7 +262,7 @@ $(document).ready(function() {
 
 			if (isGridValid()) {
 				$('#AudiogramCsvData').val(convertGridToCSV());
-				alert("Here");
+				//alert("Here");
 				return true;
 			} else {
 				alert("It appears that you have entered in multiple rows with the same ID, Age, and Ear.  Either change the ID, Age or Ear to make these rows unique.");

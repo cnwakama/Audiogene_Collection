@@ -41,14 +41,24 @@ File type: Please download the template below and fill in your data. Please be s
 <br>
 <?php
 
+echo '<div id="input-options" width=50%><label><b>Do you want to edit or add Hearing Loss data:</b></label>';
 
+echo $this->Form->create('Button', array('enctype' => 'multipart/form-data'));
+echo $this->Form->input('Patient',array('empty' => 'Choose a Patient', 'type'=>'select','options'=>$audiograms));
+
+
+echo $this->Form->end('View Audiogram', array('value' => 'View'));
 
 echo $this->Form->create('Audiogram', array('enctype' => 'multipart/form-data'));
 
 echo '<div id="input-options" width=50%><label><b>Do you want to edit or add Hearing Loss data:</b></label>';
 
-echo $this->Form->input('Patient',array('empty' => 'Choose a Patient', 'type'=>'select','options'=>$audiograms));
-echo $this->Form->input('Patient\'s Audiogram',array('empty' => 'Choose an Audiogram', 'type'=>'select','options'=>array()));
+//echo $this->Form->input('Patient',array('empty' => 'Choose a Patient', 'type'=>'select','options'=>$audiograms));
+//echo $this->Form->input('Patient\'s Audiogram',array('empty' => 'Choose an Audiogram', 'type'=>'select','options'=>array()));
+
+//echo $this->Form->create('Button', array('enctype' => 'multipart/form-data'));
+
+//echo $this->Html->div();
 $radioAttributes = array( 'legend' => false, 'value' => 'S');
 
 echo $this->Form->radio('input_type', array('F' => 'Upload File','S' => 'Spreadsheet'),$radioAttributes);
